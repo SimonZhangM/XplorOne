@@ -9,41 +9,46 @@ It is based on the existing project changelog and rewritten in the newer public 
 
 Release date: 2026-04-24
 
-This release focuses on the international desktop experience, settings polish, model configuration, and safer handling of existing book data. XplorOne now presents accounts, categories, projects, common errors, reminders, and core list pages more consistently across Chinese and English, while adding global currency-symbol preferences and improving basic English entry parsing.
+This release focuses on the English desktop experience, safer existing-book handling, and settings polish. XplorOne now localizes account, category, project, template, error, menu, and list labels more consistently without rewriting existing book data, adds a global currency-symbol preference, improves model configuration, and introduces basic English entry parsing for common bookkeeping sentences.
 
 ## Added
 
 - Added a global currency-symbol preference with support for `￥`, `$`, and `€`.
-- Added model preset persistence and clearer enabled-model status in Model Settings.
-- Added basic English natural-language entry parsing for common categories, accounts, transfers, repayments, salaries, and time expressions such as `3 PM`.
-- Added shared localized API error handling so English UI users see English error messages for common data, license, archive, and restore failures.
+- Added model preset persistence so saved model configurations keep their selected preset code.
+- Added clearer Model Settings status for the saved draft configuration and the currently enabled model configuration.
+- Added basic English entry parsing for common income, expense, transfer, loan, repayment, refund, account, relative-date, and AM/PM time expressions.
+- Added shared localized API error handling for common data, license, archive, import, restore, and settings failures.
 
 ## Changed
 
-- Reordered Settings navigation to prioritize daily-use preferences before ledger, model, license, data, and archive settings.
+- Renamed the English `Ledger` surface to `Transactions` across navigation, page titles, actions, confirmations, and export text.
+- Reordered Settings navigation to prioritize daily-use preferences before ledger, model, license, data, and archive sections.
 - Changed Display Settings and Reminder Settings to a single-card layout with internal section dividers.
-- Moved new public release notes out of the old root changelog and into the dedicated software release history documents.
+- Changed Reminder Settings time selection from the native time input to controlled hour/minute selectors for consistent bilingual display.
 
 ## Improved
 
-- Improved bilingual display for account names, account types, category names, project names, member/project management entries, templates, and emoji/icon mapping.
-- Improved category and budget pages so language switching does not create or display duplicate bilingual category groups.
-- Improved account, category, ledger, report, calendar, home, and settings page spacing, headings, month labels, table alignment, and tooltip wording.
-- Improved desktop update and About dialogs with localized text and edition information.
+- Improved display-language mapping for existing book data, including account names, account types, category names, project names, member/project management entries, templates, and icon/emoji rendering.
+- Improved English month labels across transaction, account, income/expense, budget, report, and calendar views.
+- Improved budget display so the month pill, sidebar months, category rows, and highlighted categories match the selected language and category level.
+- Improved account, category, home, report, settings, and personalization layouts with better spacing, table alignment, action-column placement, and tooltip wording.
+- Improved desktop menu, About, and update dialogs with localized labels plus edition and trial information.
 - Improved model requests in Electron by using the desktop networking path when available.
 
 ## Fixed
 
-- Fixed mixed Chinese and English account/category names appearing after switching UI language.
-- Fixed several missing category emoji mappings in the English UI.
-- Fixed reminder time display issues caused by native time input localization.
+- Fixed mixed Chinese and English account, category, and project names appearing after switching UI language.
+- Fixed missing category and account emoji mappings in the English UI.
+- Fixed duplicate or incorrect first-level category display in income/expense and budget views after language switching.
+- Fixed budget rows that could show second-level categories where only first-level budget categories should appear.
 - Fixed settings page scrolling so the sidebar stays fixed while the right panel scrolls.
-- Fixed seed logic that could reinsert default accounts, categories, members, or projects into books that already had data.
+- Fixed seed logic that could reinsert default accounts, categories, members, or projects into books that already contain data.
 
 ## Security & Stability
 
-- Strengthened model configuration storage by retaining preset metadata alongside the saved provider configuration.
 - Reduced the risk of accidental data mutation during upgrades by making default data seeding conditional on empty or clearly legacy data.
+- Improved existing-book language switching by localizing at display time instead of writing translated duplicate data into the book.
+- Preserved model preset metadata alongside provider configuration for more reliable model-setting restore and enable flows.
 
 ---
 
