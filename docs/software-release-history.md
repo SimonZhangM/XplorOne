@@ -5,6 +5,48 @@ It is based on the existing project changelog and rewritten in the newer public 
 
 ---
 
+# XplorOne v0.3.8
+
+Release date: 2026-04-24
+
+This release focuses on the international desktop experience, settings polish, model configuration, and safer handling of existing book data. XplorOne now presents accounts, categories, projects, common errors, reminders, and core list pages more consistently across Chinese and English, while adding global currency-symbol preferences and improving basic English entry parsing.
+
+## Added
+
+- Added a global currency-symbol preference with support for `￥`, `$`, and `€`.
+- Added model preset persistence and clearer enabled-model status in Model Settings.
+- Added basic English natural-language entry parsing for common categories, accounts, transfers, repayments, salaries, and time expressions such as `3 PM`.
+- Added shared localized API error handling so English UI users see English error messages for common data, license, archive, and restore failures.
+
+## Changed
+
+- Reordered Settings navigation to prioritize daily-use preferences before ledger, model, license, data, and archive settings.
+- Changed Display Settings and Reminder Settings to a single-card layout with internal section dividers.
+- Moved new public release notes out of the old root changelog and into the dedicated software release history documents.
+
+## Improved
+
+- Improved bilingual display for account names, account types, category names, project names, member/project management entries, templates, and emoji/icon mapping.
+- Improved category and budget pages so language switching does not create or display duplicate bilingual category groups.
+- Improved account, category, ledger, report, calendar, home, and settings page spacing, headings, month labels, table alignment, and tooltip wording.
+- Improved desktop update and About dialogs with localized text and edition information.
+- Improved model requests in Electron by using the desktop networking path when available.
+
+## Fixed
+
+- Fixed mixed Chinese and English account/category names appearing after switching UI language.
+- Fixed several missing category emoji mappings in the English UI.
+- Fixed reminder time display issues caused by native time input localization.
+- Fixed settings page scrolling so the sidebar stays fixed while the right panel scrolls.
+- Fixed seed logic that could reinsert default accounts, categories, members, or projects into books that already had data.
+
+## Security & Stability
+
+- Strengthened model configuration storage by retaining preset metadata alongside the saved provider configuration.
+- Reduced the risk of accidental data mutation during upgrades by making default data seeding conditional on empty or clearly legacy data.
+
+---
+
 # XplorOne v0.3.7
 
 Release date: 2026-04-24
