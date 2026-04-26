@@ -5,6 +5,52 @@ It is based on the existing project changelog and rewritten in the newer public 
 
 ---
 
+# XplorOne v0.3.9
+
+Release date: 2026-04-26
+
+This release introduces split transactions as a first-class bookkeeping capability. XplorOne now keeps bank-account flow on the parent transaction while recording category, member, project, tax, and reimbursable allocation details on dedicated allocation lines, so reports and budgets can use the allocation effect layer without duplicating real account flow.
+
+## Added
+
+- Added the `transaction_allocations` data model for income, expense, and refund allocation lines.
+- Added allocation effect queries for signed income, expense, and refund-offset reporting.
+- Added split editing in Quick Entry, with a parent transaction row and allocation detail rows in one table.
+- Added a split action on the Transactions page and expandable allocation detail rows.
+- Added allocation integrity checks in Data Settings for missing, unbalanced, cross-book, invalid-type, orphaned, uncategorized, and refund-direction issues.
+- Added CSV export support for allocation detail rows while keeping parent transaction export as the default bank-flow view.
+
+## Changed
+
+- Category, budget, project, member, tax, reimbursable, Top N, and AI category analysis calculations now use allocation effects instead of legacy parent transaction category fields.
+- Income, expense, and refund writes now create or update allocation rows; transfer, loan, repayment, and balance adjustment transactions remain parent-only.
+- Normal single-allocation edits keep parent amount and allocation amount synchronized in one save flow.
+- Split transactions must be edited in the split editor and cannot save unbalanced allocation totals.
+- Backup, restore, `.xpl`, and legacy import flows now preserve or reconstruct allocation rows and run integrity checks after restore/import.
+
+## Improved
+
+- Improved Transactions page split UI with a `split.svg` action, category-cell expand controls, and smaller allocation child rows aligned to the existing table.
+- Improved Quick Entry split mode so new split entries start with empty placeholders, while splitting an existing transaction inherits the selected parent transaction.
+- Improved Multi Entry and Split category display so selected categories show only the second-level category name.
+- Improved split picker menus, date/time selection, placeholder typography, and bilingual labels to match the Multi Entry table experience.
+- Improved AI entry draft handling and internationalized entry feedback around split-capable transaction creation.
+
+## Fixed
+
+- Fixed split editor layout overflowing when opened from the Transactions page.
+- Fixed split-mode empty values displaying as real `Uncategorized` or with a leading slash before account placeholders.
+- Fixed native select/date controls in split mode that did not match the Multi Entry dropdown experience.
+- Fixed category statistics, reports, and exports that could previously depend on legacy parent category fields after split allocation data was introduced.
+
+## Security & Stability
+
+- Prevented unbalanced split drafts from being persisted to formal transaction tables.
+- Added stricter service-side validation for allocation totals, same-book references, category type matching, and refund direction.
+- Kept account balances, reconciliation, duplicate detection, and cash-flow calculations parent-transaction based so split allocations do not double-count account flow.
+
+---
+
 # XplorOne v0.3.8
 
 Release date: 2026-04-24
