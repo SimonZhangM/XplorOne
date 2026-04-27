@@ -1,0 +1,236 @@
+name: Bug Report
+description: Report a reproducible bug, installer problem, incorrect result, or broken behavior in XplorOne.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem with XplorOne.
+
+        Please remove all sensitive information before submitting:
+
+        - model API keys
+        - Local API tokens
+        - MCP client tokens
+        - license codes
+        - private financial data
+        - real bank statements
+        - full backups
+        - exported ledger files
+        - unredacted logs or screenshots
+
+        中文提示：提交前请删除 API Key、token、授权码、真实财务数据、银行流水、完整备份、导出账本和未脱敏截图。
+
+  - type: input
+    id: xplorone-version
+    attributes:
+      label: XplorOne version
+      description: Which XplorOne version are you using? / 你正在使用哪个 XplorOne 版本？
+      placeholder: "v0.3.7"
+    validations:
+      required: true
+
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version
+      description: Which Windows version are you using? / 你正在使用哪个 Windows 版本？
+      placeholder: "Windows 11 23H2 / Windows 10 22H2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Affected area
+      description: Where did the issue happen? / 问题发生在哪个区域？
+      options:
+        - Installation / Update
+        - Startup / App launch
+        - Quick Entry
+        - Home Workbench
+        - Calendar
+        - Lists - Ledger
+        - Lists - Income & Expense
+        - Lists - Accounts
+        - Reports - Cash Flow
+        - Reports - Income & Expense
+        - Reports - Assets & Liabilities
+        - Chat - Query
+        - Chat - Entry Drafts
+        - Chat - Analysis
+        - Chat - Free Chat
+        - Management - Budget
+        - Management - Members
+        - Management - Projects
+        - Settings - Model Service / BYOK
+        - Settings - Data / Backup / Restore
+        - Local API / MCP
+        - Import / Export / Archive
+        - Licensing / Activation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: Problem type
+      description: What kind of problem is this? / 这属于哪类问题？
+      options:
+        - Crash or app cannot start
+        - Installer or update problem
+        - UI or layout problem
+        - Incorrect result or calculation
+        - Transaction / ledger problem
+        - Report or chart problem
+        - Data import / export / backup / restore problem
+        - AI / BYOK / model configuration problem
+        - Local API / MCP problem
+        - Language / i18n problem
+        - Performance problem
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the problem. / 请简要描述问题。
+      placeholder: "When I ..., XplorOne ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Tell us how to reproduce the problem. / 请写出复现步骤。
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. Enter ...
+        4. See ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-result
+    attributes:
+      label: Expected result
+      description: What did you expect to happen? / 你原本预期会发生什么？
+      placeholder: "I expected XplorOne to ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-result
+    attributes:
+      label: Actual result
+      description: What actually happened? / 实际发生了什么？
+      placeholder: "Instead, XplorOne ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots-or-logs
+    attributes:
+      label: Screenshots or logs
+      description: |
+        Add screenshots or logs if helpful.
+        Please remove all sensitive information before uploading.
+        如有需要，可以提供截图或日志，但请务必先脱敏。
+      placeholder: "Paste redacted logs or attach redacted screenshots here."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: involved-features
+    attributes:
+      label: Related features
+      description: Select all that apply. / 请选择相关功能。
+      options:
+        - label: AI / BYOK / model API key
+        - label: Local API
+        - label: MCP
+        - label: Import / Export / Backup / Restore
+        - label: Quick Entry / transaction recording
+        - label: Reports / charts
+        - label: Language / bilingual behavior
+        - label: Installer / update
+        - label: Licensing / activation
+        - label: Not sure
+
+  - type: textarea
+    id: ai-byok-details
+    attributes:
+      label: AI / BYOK details, if applicable
+      description: |
+        If this issue involves AI or BYOK, provide non-secret details.
+        Do NOT include your API key.
+        如果问题涉及 AI 或 BYOK，请提供非敏感信息。不要提供 API Key。
+      placeholder: |
+        Provider:
+        Base URL type:
+        Model name:
+        Did connection test pass?
+        Chat mode: Query / Entry / Analysis / Free Chat
+        Input language:
+        Expected response language:
+        Actual response language:
+    validations:
+      required: false
+
+  - type: textarea
+    id: mcp-local-api-details
+    attributes:
+      label: Local API / MCP details, if applicable
+      description: |
+        If this issue involves Local API or MCP, provide non-secret details.
+        Do NOT include Local API tokens, MCP tokens, or full endpoints containing secrets.
+        如果问题涉及本地 API 或 MCP，请提供非敏感信息。不要提供 token 或带密钥的完整 endpoint。
+      placeholder: |
+        External client: Codex / WorkBuddy / Other
+        Local API or MCP:
+        Tool or query attempted:
+        Was XplorOne running?
+        Expected result:
+        Actual result:
+        Error message:
+    validations:
+      required: false
+
+  - type: textarea
+    id: data-related-details
+    attributes:
+      label: Import / export / backup details, if applicable
+      description: |
+        If this issue involves data workflows, describe the operation without uploading private financial files.
+        如果问题涉及导入、导出、备份或恢复，请描述操作，不要上传真实财务文件。
+      placeholder: |
+        Operation: import / export / backup / restore / archive / .xpl
+        Source file type:
+        Current book or archived book:
+        Error message:
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: sensitive-data-check
+    attributes:
+      label: Sensitive data check
+      description: Please confirm before submitting. / 提交前请确认。
+      options:
+        - label: I have removed API keys, Local API tokens, MCP tokens, license codes, private financial data, and personal information from this report.
+          required: true
+
+  - type: checkboxes
+    id: latest-version-check
+    attributes:
+      label: Release check
+      description: Please confirm whether you checked the release version. / 请确认是否检查过版本。
+      options:
+        - label: I have checked whether this issue still happens in the latest available release.
+          required: false

@@ -4,14 +4,15 @@ D:\APP\marketing\github\
 ├── [✓] CHANGELOG.md                          ← 根目录英文摘要版变更记录；用于快速查看主要版本变化与关键更新
 ├── [ ] ROADMAP.md                            ← 公开路线图；用于说明后续方向、阶段性重点与暂不处理的事项
 ├── [✓] SUPPORT.md                            ← 支持与反馈说明；用于承接用户提问、反馈渠道与基本求助方式
+├── [✓] SUPPORT_zh-CN.md                      ← 中文支持与反馈说明；用于中文用户理解提问、报错和敏感信息边界
 ├── [ ] LICENSE                               ← 开源许可证文件；用于明确仓库代码与内容的授权边界
 ├── [ ] LICENSE-NOTICE.md                     ← 许可证补充说明；用于解释非标准授权、资源归属或商业限制
 ├── [local] GITHUB_REPO_MEMORY.md             ← 本地工作记忆文件；用于沉淀仓库维护口径，已通过 `.gitignore` 排除，不进入公开仓库
 ├── [✓] Github_Structure.md                   ← 仓库结构说明；用于记录当前已完成与待补齐的 GitHub 文件布局
 ├── [✓] .gitignore                            ← Git 忽略规则；用于排除本地生成文件、缓存文件与不应提交的临时内容
-├── [ ] .github/                              ← GitHub 仓库自动化与协作配置目录；用于放 issue 模板、PR 模板、Actions 等
-│   ├── [ ] ISSUE_TEMPLATE/                   ← Issue 模板目录；用于规范 bug、feature request、question 等提交格式
-│   │   └── [ ] bug_report.yml                ← Bug 模板；用于收集复现步骤、环境信息与影响范围
+├── [✓] .github/                              ← GitHub 仓库自动化与协作配置目录；用于放 issue 模板、PR 模板、Actions 等
+│   ├── [✓] ISSUE_TEMPLATE/                   ← Issue 模板目录；用于规范 bug、feature request、question 等提交格式
+│   │   └── [✓] bug_report.yml                ← Bug 模板；用于收集复现步骤、环境信息与影响范围
 │   ├── [ ] PULL_REQUEST_TEMPLATE.md          ← PR 模板；用于统一变更说明、验证方式与风险提示
 │   └── [ ] workflows/                        ← GitHub Actions 工作流目录；用于自动检查、发布或同步任务
 ├── [✓] docs/                                 ← 长文档目录；用于承接 README 之外的详细说明、功能介绍、版本历史和专题页面
@@ -51,6 +52,8 @@ D:\APP\marketing\github\
   - `README_zh-CN.md`
   - `CHANGELOG.md`
   - `SUPPORT.md`
+  - `SUPPORT_zh-CN.md`
+  - `.github/ISSUE_TEMPLATE/bug_report.yml`
   - `docs/getting-started.*`
   - `docs/feature-overview.*`
   - `docs/software-release-history.*`
@@ -63,6 +66,5 @@ D:\APP\marketing\github\
   - `ROADMAP.md`
   - `LICENSE`
   - `LICENSE-NOTICE.md`
-  - `.github/ISSUE_TEMPLATE/bug_report.yml`
   - `.github/PULL_REQUEST_TEMPLATE.md`
   - `community/welcome-to-xplorone.md`
