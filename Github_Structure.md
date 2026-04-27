@@ -25,12 +25,12 @@ D:\APP\marketing\github\
 │   ├── [✓] privacy-and-ai-boundaries_zh-CN.md← 中文隐私与 AI 边界说明；用于中文读者理解产品信任边界
 │   ├── [✓] known-limitations.md              ← 英文已知限制说明；用于说明当前未覆盖的平台、能力边界与注意事项
 │   ├── [✓] known-limitations_zh-CN.md        ← 中文已知限制说明；用于减少错误预期并提前解释限制
-│   ├── [ ] byok-setup.md                     ← 英文 BYOK 配置指南；用于说明 API Key 配置方式与注意点
-│   ├── [ ] byok-setup_zh-CN.md               ← 中文 BYOK 配置指南；用于中文用户理解模型配置方式
-│   ├── [ ] faq.md                            ← 英文 FAQ；用于集中回答下载、定位、AI、平台、数据边界等常见问题
-│   ├── [ ] faq_zh-CN.md                      ← 中文 FAQ；用于中文环境下的常见问题解释
+│   ├── [✓] byok-setup.md                     ← 英文 BYOK 配置指南；用于说明 API Key 配置方式与注意点
+│   ├── [✓] byok-setup_zh-CN.md               ← 中文 BYOK 配置指南；用于中文用户理解模型配置方式
+│   ├── [✓] faq.md                            ← 英文 FAQ；用于集中回答下载、定位、AI、平台、数据边界等常见问题
+│   ├── [✓] faq_zh-CN.md                      ← 中文 FAQ；用于中文环境下的常见问题解释
 │   └── [✓] assets/                           ← 文档素材目录；用于放 README、功能页、发布页引用的截图、GIF 和说明图
-│      ├── [✓] xplorone-workbench.png         ← 工作台主界面截图；用于展示 XplorOne 的整体桌面体验
+│      ├── [✓] xplorone-main-screenshot.png   ← 工作台主界面截图；用于展示 XplorOne 的整体桌面体验
 │      ├── [✓] xplorone-chat-page.png         ← Chat / AI 交互页面截图；用于展示对话、查询与 AI 辅助入口
 │      ├── [✓] xplorone-calendar-page.png     ← 日历页面截图；用于展示按日期理解财务活动的方式
 │      ├── [✓] xplorone-income-expense-page.png← 收支页面截图；用于展示分类、收入支出结构与明细视角
@@ -56,13 +56,13 @@ D:\APP\marketing\github\
   - `docs/software-release-history.*`
   - `docs/privacy-and-ai-boundaries.*`
   - `docs/known-limitations.*`
+  - `docs/byok-setup.*`
+  - `docs/faq.*`
   - `docs/assets/*.png`
 - 当前仍待补齐的 GitHub hub 文件包括：
   - `ROADMAP.md`
   - `LICENSE`
   - `LICENSE-NOTICE.md`
-  - `docs/byok-setup.*`
-  - `docs/faq.*`
   - `.github/ISSUE_TEMPLATE/bug_report.yml`
   - `.github/PULL_REQUEST_TEMPLATE.md`
   - `community/welcome-to-xplorone.md`
