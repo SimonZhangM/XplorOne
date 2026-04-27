@@ -6,38 +6,50 @@ For complete user-facing release notes, see:
 
 - [Software Release History](./docs/software-release-history.md)
 
-XplorOne is currently moving from an early local-first desktop finance workspace into a more complete product release line, with work across Windows packaging, local data boundaries, AI workflows, bilingual UI, reporting, budget stability, and read-only local MCP integration.
+XplorOne is currently moving from an early local-first desktop finance workspace into a more complete product release line, with work across Windows packaging, local data boundaries, AI workflows, bilingual UI, reporting, budget stability, split transaction handling, and read-only local MCP integration.
 
 ---
 
 ## Latest Release
 
-### v0.3.8 - 2026-04-24
+### v0.3.9 - 2026-04-26
 
-**Focus: English desktop experience, safer existing-book handling, and settings polish**
+**Focus: split transactions and allocation-based reporting**
 
-This release improves the English desktop experience across labels, settings, budget views, menus, and existing-book display behavior, while reducing the risk of accidental data mutation during upgrades.
+This release introduces split transactions as a first-class bookkeeping capability. XplorOne now keeps real account flow on the parent transaction while recording category, member, project, tax, and reimbursable allocation details on dedicated allocation lines.
 
 #### Highlights
 
-- Added a global currency-symbol preference.
-- Added model preset persistence and clearer model-setting status indicators.
-- Added basic English entry parsing for common bookkeeping sentences, including income, expense, transfer, loan, repayment, refund, account, relative-date, and AM/PM time expressions.
-- Renamed the English `Ledger` surface to `Transactions` across navigation, page titles, actions, confirmations, and export text.
-- Improved display-language mapping for existing book data without rewriting existing account, category, project, member, or template records.
-- Improved budget, account, category, home, report, settings, personalization, menu, About, and update-dialog localization and layout polish.
-- Fixed mixed Chinese and English account, category, and project names after switching UI language.
-- Fixed seed logic that could reinsert default accounts, categories, members, or projects into books that already contain data.
+- Added the `transaction_allocations` data model for income, expense, and refund allocation lines.
+- Added allocation effect queries for signed income, expense, and refund-offset reporting.
+- Added split editing in Quick Entry, with a parent transaction row and allocation detail rows in one table.
+- Added a split action on the Transactions page, expandable allocation detail rows, and CSV export support for allocation detail rows.
+- Updated category, budget, project, member, tax, reimbursable, Top N, and AI category analysis calculations to use allocation effects instead of legacy parent transaction category fields.
+- Preserved allocation rows across backup, restore, `.xpl`, and legacy import flows, with integrity checks after restore/import.
+- Improved split UI behavior across Transactions, Quick Entry, Multi Entry, picker menus, date/time selection, placeholders, bilingual labels, and AI entry draft feedback.
+- Fixed split editor overflow, placeholder display issues, native-control inconsistencies, and report/export paths that could still depend on legacy parent category fields.
 
 #### Security and stability
 
-- Reduced the risk of accidental data mutation during upgrades by making default data seeding conditional on empty or clearly legacy data.
-- Improved existing-book language switching by localizing at display time instead of writing translated duplicate data into the book.
-- Preserved model preset metadata alongside provider configuration for more reliable model-setting restore and enable flows.
+- Prevented unbalanced split drafts from being persisted to formal transaction tables.
+- Added stricter service-side validation for allocation totals, same-book references, category type matching, and refund direction.
+- Kept account balances, reconciliation, duplicate detection, and cash-flow calculations parent-transaction based so split allocations do not double-count account flow.
 
 ---
 
 ## Recent Releases
+
+### v0.3.8 - 2026-04-24
+
+**Focus: English desktop experience, safer existing-book handling, and settings polish**
+
+- Added a global currency-symbol preference.
+- Added model preset persistence and clearer model-setting status indicators.
+- Added basic English entry parsing for common bookkeeping sentences.
+- Renamed the English `Ledger` surface to `Transactions` across navigation, page titles, actions, confirmations, and export text.
+- Improved display-language mapping for existing book data without rewriting existing account, category, project, member, or template records.
+- Fixed mixed Chinese and English account, category, and project names after switching UI language.
+- Reduced the risk of accidental data mutation during upgrades by making default data seeding conditional on empty or clearly legacy data.
 
 ### v0.3.7 - 2026-04-24
 
@@ -78,28 +90,20 @@ This release improves the English desktop experience across labels, settings, bu
 - Improved report icons, chart areas, spacing, and bilingual labels.
 - Fixed misleading bar proportions caused by independently scaled mirrored charts.
 
-### v0.3.3 - 2026-04-22
-
-**Focus: renderer type-check cleanup and management-page polish**
-
-- Cleared historical renderer type-check errors.
-- Added the full create-member flow.
-- Added shared normalizers for stable renderer-side result handling.
-- Unified action buttons across member, project, account, and income/expense pages.
-- Improved visual consistency across Ledger, Income & Expense, Accounts, and Calendar pages.
-
 ---
 
 ## 0.3 Series Highlights
 
-The 0.3 series focuses on English product readiness, bilingual AI chat, budget stability, cash-flow reporting, renderer cleanup, licensing foundations, and internationalized desktop surfaces.
+The 0.3 series focuses on split transactions, allocation-based reporting, English product readiness, bilingual AI chat, budget stability, cash-flow reporting, renderer cleanup, licensing foundations, and internationalized desktop surfaces.
 
+- Added split transactions as a first-class bookkeeping capability.
+- Added allocation effect queries for category, budget, project, member, tax, reimbursable, Top N, and AI category analysis.
 - Added commercial licensing foundations and bilingual book-template assembly.
 - Improved Settings, Reports, Home, Calendar, Ledger/Transactions, Budget, and management-page internationalization.
 - Added the Cash Flow report and aligned mirrored trend chart scaling.
 - Clarified Ledger cash-flow semantics separately from income/expense accounting statistics.
 - Improved budget loading, shared budget cache, annual budget saving, and local-preview error feedback.
-- Improved bilingual AI chat behavior, English query parsing, and follow-up query handling.
+- Improved bilingual AI chat behavior, English query parsing, English entry parsing, and follow-up query handling.
 
 ---
 
