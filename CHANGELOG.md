@@ -6,38 +6,50 @@ For complete user-facing release notes, see:
 
 - [Software Release History](./docs/software-release-history.md)
 
-XplorOne is currently moving from an early local-first desktop finance workspace into a more complete product release line, with work across Windows packaging, local data boundaries, AI workflows, bilingual UI, reporting, budget stability, split transaction handling, and read-only local MCP integration.
+XplorOne is currently moving from an early local-first desktop finance workspace into a more complete product release line, with work across Windows packaging, local data boundaries, AI workflows, bilingual UI, reporting, budget stability, split transaction handling, allocation-based reporting, and read-only local MCP integration.
 
 ---
 
 ## Latest Release
 
-### v0.3.9 - 2026-04-26
+### v0.3.10 - 2026-04-27
 
-**Focus: split transactions and allocation-based reporting**
+**Focus: allocation effects, unified dialogs, and desktop interaction polish**
 
-This release introduces split transactions as a first-class bookkeeping capability. XplorOne now keeps real account flow on the parent transaction while recording category, member, project, tax, and reimbursable allocation details on dedicated allocation lines.
+This release continues the split-transaction rollout by making allocation effects the preferred source for more dashboards, reports, category navigation, and AI category analysis. It also unifies desktop dialog/dropdown behavior and improves metadata editing for split allocation rows without disturbing the parent bank-flow record.
 
 #### Highlights
 
-- Added the `transaction_allocations` data model for income, expense, and refund allocation lines.
-- Added allocation effect queries for signed income, expense, and refund-offset reporting.
-- Added split editing in Quick Entry, with a parent transaction row and allocation detail rows in one table.
-- Added a split action on the Transactions page, expandable allocation detail rows, and CSV export support for allocation detail rows.
-- Updated category, budget, project, member, tax, reimbursable, Top N, and AI category analysis calculations to use allocation effects instead of legacy parent transaction category fields.
-- Preserved allocation rows across backup, restore, `.xpl`, and legacy import flows, with integrity checks after restore/import.
-- Improved split UI behavior across Transactions, Quick Entry, Multi Entry, picker menus, date/time selection, placeholders, bilingual labels, and AI entry draft feedback.
-- Fixed split editor overflow, placeholder display issues, native-control inconsistencies, and report/export paths that could still depend on legacy parent category fields.
+- Added a unified in-app dialog layer for confirmation, notice, and prompt-style interactions.
+- Added a shared soft-select control for sidebar filters, settings fields, and form dropdowns.
+- Added member, project, and note editing for split allocation detail rows on the Transactions page.
+- Added allocation-category focus when opening Transactions from Income & Expense categories, including focused row amounts and CSV export output.
+- Updated more dashboards, reports, calendar summaries, category views, and AI category analysis flows to rely on allocation effects.
+- Preserved existing multi-allocation detail rows during ordinary parent-transaction edits unless allocation data is explicitly submitted through the split flow.
+- Improved sidebar dropdowns, Quick Entry spacing, split-entry layout, allocation child rows, settings-page dialogs, currency chips, and recent-transaction display.
+- Fixed native browser dialogs/prompts, old native select menus, allocation drilldown amounts, dismissed notifications, and analysis/category summaries that could still fall back to parent category fields.
 
 #### Security and stability
 
-- Prevented unbalanced split drafts from being persisted to formal transaction tables.
-- Added stricter service-side validation for allocation totals, same-book references, category type matching, and refund direction.
-- Kept account balances, reconciliation, duplicate detection, and cash-flow calculations parent-transaction based so split allocations do not double-count account flow.
+- Added service-side same-book checks before updating allocation metadata.
+- Reduced accidental allocation data loss by preserving existing split rows during ordinary parent-transaction edits.
+- Kept app-facing dialogs and prompts inside the renderer-controlled UI layer for more predictable desktop and preview behavior.
 
 ---
 
 ## Recent Releases
+
+### v0.3.9 - 2026-04-26
+
+**Focus: split transactions and allocation-based reporting**
+
+- Added the `transaction_allocations` data model for income, expense, and refund allocation lines.
+- Added allocation effect queries for signed income, expense, and refund-offset reporting.
+- Added split editing in Quick Entry and a split action on the Transactions page.
+- Updated category, budget, project, member, tax, reimbursable, Top N, and AI category analysis calculations to use allocation effects.
+- Preserved allocation rows across backup, restore, `.xpl`, and legacy import flows.
+- Prevented unbalanced split drafts from being persisted to formal transaction tables.
+- Kept account balances, reconciliation, duplicate detection, and cash-flow calculations parent-transaction based so split allocations do not double-count account flow.
 
 ### v0.3.8 - 2026-04-24
 
@@ -81,15 +93,6 @@ This release introduces split transactions as a first-class bookkeeping capabili
 - Improved bilingual local-preview runtime errors and fallback messages.
 - Fixed mismatches between month summaries and budget tables after switching months.
 
-### v0.3.4 - 2026-04-23
-
-**Focus: Cash Flow report and chart scaling**
-
-- Added the Cash Flow report page.
-- Unified chart scaling across Income & Expense and Cash Flow mirrored trend charts.
-- Improved report icons, chart areas, spacing, and bilingual labels.
-- Fixed misleading bar proportions caused by independently scaled mirrored charts.
-
 ---
 
 ## 0.3 Series Highlights
@@ -98,6 +101,8 @@ The 0.3 series focuses on split transactions, allocation-based reporting, Englis
 
 - Added split transactions as a first-class bookkeeping capability.
 - Added allocation effect queries for category, budget, project, member, tax, reimbursable, Top N, and AI category analysis.
+- Extended allocation effects into dashboards, reports, category navigation, calendar summaries, overview analytics, and CSV output.
+- Added unified in-app dialogs and shared soft-select controls for more consistent desktop interactions.
 - Added commercial licensing foundations and bilingual book-template assembly.
 - Improved Settings, Reports, Home, Calendar, Ledger/Transactions, Budget, and management-page internationalization.
 - Added the Cash Flow report and aligned mirrored trend chart scaling.
