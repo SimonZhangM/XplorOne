@@ -5,6 +5,49 @@ It is based on the existing project changelog and rewritten in the newer public 
 
 ---
 
+# XplorOne v0.3.10
+
+Release date: 2026-04-27
+
+This release continues the split-transaction rollout by making allocation effects the preferred source for more dashboards, reports, and category navigation. It also unifies desktop dialog and dropdown behavior, improves bilingual display details across core pages, and gives split allocation rows lighter metadata editing without disturbing the parent bank-flow record.
+
+## Added
+
+- Added a unified in-app dialog layer for confirmation, notice, and prompt-style interactions.
+- Added a shared soft-select control for sidebar filters, settings fields, and form dropdowns.
+- Added member, project, and note editing for split allocation detail rows on the Transactions page.
+- Added allocation-category focus when opening Transactions from Income & Expense categories, including focused row amounts and CSV export output.
+
+## Changed
+
+- Income/expense category views, calendar summaries, income and expense reports, cash-flow category distributions, overview analytics, and AI category analysis now rely more consistently on allocation effects.
+- Editing a parent transaction no longer overwrites existing multi-allocation detail rows unless allocation data is explicitly submitted through the split flow.
+- The Chinese UI now labels the model section as Model Settings, while the English label remains Model Service.
+
+## Improved
+
+- Improved sidebar year/month dropdowns with centered, app-styled menus across Transactions, Income & Expense, Accounts, and Budget-related list views.
+- Improved Quick Entry multi-entry and split-entry spacing, amount field sizing, add-row button alignment, and source-account display.
+- Improved Transactions allocation child rows with a lighter focused background, borders, smaller emoji, shorter row height, and row-level metadata editing.
+- Improved settings-page layout polish, unsaved-change placement, unified confirm dialogs, and display-setting currency chip sizing.
+- Improved home recent-transaction account column spacing and bilingual account/category display consistency.
+
+## Fixed
+
+- Fixed native browser dialogs and prompts appearing in user-facing flows.
+- Fixed old native select menus appearing in sidebar and settings dropdowns.
+- Fixed allocation-based category drilldowns showing parent transaction amounts instead of focused allocation amounts.
+- Fixed dismissed notifications still appearing in the notification list.
+- Fixed analysis samples and category summaries that could still fall back to parent transaction category fields after split allocations were introduced.
+
+## Security & Stability
+
+- Added service-side same-book checks before updating allocation metadata.
+- Reduced accidental allocation data loss by preserving existing split rows during ordinary parent-transaction edits.
+- Kept app-facing dialogs and prompts inside the same renderer-controlled UI layer for more predictable desktop and preview behavior.
+
+---
+
 # XplorOne v0.3.9
 
 Release date: 2026-04-26
