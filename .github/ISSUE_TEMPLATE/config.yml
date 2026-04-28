@@ -1,0 +1,22 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Questions, ideas, and usage discussions / 使用问题、想法与讨论
+    url: https://github.com/SimonZhangM/XplorOne/discussions
+    about: Please use Discussions for product questions, usage questions, workflow ideas, and non-bug feedback. 一般问题、使用建议和产品讨论请优先使用 Discussions。
+
+  - name: Read the support guide / 阅读支持与反馈说明
+    url: https://github.com/SimonZhangM/XplorOne/blob/main/SUPPORT.md
+    about: Please read this before opening a bug report. It explains where to ask, what to include, and what sensitive data not to share. 提交问题前建议先阅读支持说明，了解该提供哪些信息以及哪些敏感内容不要公开。
+
+  - name: Documentation and FAQ / 文档与常见问题
+    url: https://github.com/SimonZhangM/XplorOne/tree/main/docs
+    about: Check Getting Started, Feature Overview, FAQ, BYOK Setup, Known Limitations, and Privacy & AI Boundaries. 可先查看快速开始、功能导览、FAQ、BYOK、当前限制与隐私边界说明。
+
+  - name: Security or sensitive reports / 安全或敏感问题
+    url: https://www.xplorone.com
+    about: Do not open a public issue for token exposure, API key exposure, private financial data exposure, or security-sensitive reports. Please contact simonzhang2026@163.com. 如涉及 token、API Key、私人财务数据或安全敏感问题，请不要公开提交 issue，请联系邮箱。
+
+  - name: Business, licensing, OEM, or commercial inquiries / 商业、授权、OEM 或合作咨询
+    url: https://www.xplorone.com
+    about: For licensing, redistribution, integration, OEM, white-label, or commercial cooperation inquiries, contact simonzhang2026@163.com.
