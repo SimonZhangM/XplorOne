@@ -2,7 +2,8 @@ D:\APP\marketing\github\
 ├── [✓] README.md                             ← 英文仓库首页；作为 GitHub 首屏产品介绍，优先讲价值、定位、下载入口与反馈入口
 ├── [✓] README_zh-CN.md                       ← 中文仓库首页；用于中文读者快速理解产品定位、能力边界与主要资料入口
 ├── [✓] CHANGELOG.md                          ← 根目录英文摘要版变更记录；用于快速查看主要版本变化与关键更新
-├── [ ] ROADMAP.md                            ← 公开路线图；用于说明后续方向、阶段性重点与暂不处理的事项
+├── [✓] ROADMAP.md                            ← 英文公开路线图；用于说明后续方向、阶段性重点与暂不处理的事项
+├── [✓] ROADMAP_zh-CN.md                      ← 中文公开路线图；用于中文读者理解产品方向、阶段重点和边界
 ├── [✓] SUPPORT.md                            ← 支持与反馈说明；用于承接用户提问、反馈渠道与基本求助方式
 ├── [✓] SUPPORT_zh-CN.md                      ← 中文支持与反馈说明；用于中文用户理解提问、报错和敏感信息边界
 ├── [ ] LICENSE                               ← 开源许可证文件；用于明确仓库代码与内容的授权边界
@@ -12,7 +13,8 @@ D:\APP\marketing\github\
 ├── [✓] .gitignore                            ← Git 忽略规则；用于排除本地生成文件、缓存文件与不应提交的临时内容
 ├── [✓] .github/                              ← GitHub 仓库自动化与协作配置目录；用于放 issue 模板、PR 模板、Actions 等
 │   ├── [✓] ISSUE_TEMPLATE/                   ← Issue 模板目录；用于规范 bug、feature request、question 等提交格式
-│   │   └── [✓] bug_report.yml                ← Bug 模板；用于收集复现步骤、环境信息与影响范围
+│   │   ├── [✓] bug_report.yml                ← Bug 模板；用于收集复现步骤、环境信息与影响范围
+│   │   └── [✓] config.yml                    ← Issue 入口配置；用于引导用户优先使用 Discussions、文档和私下安全反馈渠道
 │   ├── [ ] PULL_REQUEST_TEMPLATE.md          ← PR 模板；用于统一变更说明、验证方式与风险提示
 │   └── [ ] workflows/                        ← GitHub Actions 工作流目录；用于自动检查、发布或同步任务
 ├── [✓] docs/                                 ← 长文档目录；用于承接 README 之外的详细说明、功能介绍、版本历史和专题页面
@@ -32,12 +34,21 @@ D:\APP\marketing\github\
 │   ├── [✓] faq_zh-CN.md                      ← 中文 FAQ；用于中文环境下的常见问题解释
 │   └── [✓] assets/                           ← 文档素材目录；用于放 README、功能页、发布页引用的截图、GIF 和说明图
 │      ├── [✓] xplorone-main-screenshot.png   ← 工作台主界面截图；用于展示 XplorOne 的整体桌面体验
+│      ├── [✓] xplorone-main-screenshot-cn.png← 中文工作台主界面截图；用于中文页面展示整体桌面体验
 │      ├── [✓] xplorone-chat-page.png         ← Chat / AI 交互页面截图；用于展示对话、查询与 AI 辅助入口
+│      ├── [✓] xplorone-chat-analysis-page.png← Chat 分析页面截图；用于展示 AI 分析与解释入口
 │      ├── [✓] xplorone-calendar-page.png     ← 日历页面截图；用于展示按日期理解财务活动的方式
+│      ├── [✓] xplorone-calendar-page-cn.png  ← 中文日历页面截图；用于中文资料展示日期视角
 │      ├── [✓] xplorone-income-expense-page.png← 收支页面截图；用于展示分类、收入支出结构与明细视角
+│      ├── [✓] xplorone-income-expense-page-cn.png← 中文收支页面截图；用于中文资料展示收支结构
 │      ├── [✓] xplorone-cashflow-page.png     ← 现金流报表截图；用于展示资金流入、流出和净流动
+│      ├── [✓] xplorone-cashflow-page-cn.png  ← 中文现金流报表截图；用于中文资料展示现金流视角
 │      ├── [✓] xplorone-asset-liability-page.png← 资产负债报表截图；用于展示资产、负债和净资产结构
-│      └── [✓] xplorone-budget-page.png       ← 预算页面截图；用于展示预算、分类和计划控制能力
+│      ├── [✓] xplorone-asset-liability-page-cn.png← 中文资产负债报表截图；用于中文资料展示资产负债结构
+│      ├── [✓] xplorone-budget-page.png       ← 预算页面截图；用于展示预算、分类和计划控制能力
+│      ├── [✓] xplorone-budget-page-cn.png    ← 中文预算页面截图；用于中文资料展示预算管理能力
+│      ├── [✓] xplorone-ledger-page-cn.png    ← 中文流水页面截图；用于中文资料展示账本流水视角
+│      └── [✓] xplorone-API-MCP-page-cn.png   ← 中文 API / MCP 页面截图；用于展示本地集成与 MCP 设置入口
 ├── [ ] community/                            ← 社区内容目录；用于放欢迎帖、社区说明和长期讨论入口
 │   └── [ ] welcome-to-xplorone.md            ← 社区欢迎帖；用于说明仓库定位、反馈方式与 Discussions 使用规则
 └── [ ] releases/                             ← 可选发布素材目录；用于整理 release 文案、截图清单、发布配图或下载说明
@@ -51,9 +62,12 @@ D:\APP\marketing\github\
   - `README.md`
   - `README_zh-CN.md`
   - `CHANGELOG.md`
+  - `ROADMAP.md`
+  - `ROADMAP_zh-CN.md`
   - `SUPPORT.md`
   - `SUPPORT_zh-CN.md`
   - `.github/ISSUE_TEMPLATE/bug_report.yml`
+  - `.github/ISSUE_TEMPLATE/config.yml`
   - `docs/getting-started.*`
   - `docs/feature-overview.*`
   - `docs/software-release-history.*`
@@ -63,7 +77,6 @@ D:\APP\marketing\github\
   - `docs/faq.*`
   - `docs/assets/*.png`
 - 当前仍待补齐的 GitHub hub 文件包括：
-  - `ROADMAP.md`
   - `LICENSE`
   - `LICENSE-NOTICE.md`
   - `.github/PULL_REQUEST_TEMPLATE.md`
