@@ -6,38 +6,50 @@ For complete user-facing release notes, see:
 
 - [Software Release History](./docs/software-release-history.md)
 
-XplorOne is currently moving from an early local-first desktop finance workspace into a more complete product release line, with work across Windows packaging, local data boundaries, AI workflows, bilingual UI, reporting, budget stability, split transaction handling, allocation-based reporting, and read-only local MCP integration.
+XplorOne is currently moving from an early local-first desktop finance workspace into a more complete product release line, with work across Windows packaging, local data boundaries, AI workflows, bilingual UI, reporting, budget stability, split transaction handling, allocation-based reporting, clearer local/AI assistant boundaries, and read-only local MCP integration.
 
 ---
 
 ## Latest Release
 
-### v0.3.10 - 2026-04-27
+### v0.4.0 - 2026-04-28
 
-**Focus: allocation effects, unified dialogs, and desktop interaction polish**
+**Focus: clearer Local Assistant and AI Assistant boundaries**
 
-This release continues the split-transaction rollout by making allocation effects the preferred source for more dashboards, reports, category navigation, and AI category analysis. It also unifies desktop dialog/dropdown behavior and improves metadata editing for split allocation rows without disturbing the parent bank-flow record.
+This release reorganizes chat into two clearer assistants: Local Assistant for fast local queries and entries, and AI Assistant for deeper analysis and open-ended conversation. It also tightens the local query boundary so basic finance queries no longer fall back to AI guessing, improves chat session routing and assistant switching, and strengthens bilingual display for account and category names.
 
 #### Highlights
 
-- Added a unified in-app dialog layer for confirmation, notice, and prompt-style interactions.
-- Added a shared soft-select control for sidebar filters, settings fields, and form dropdowns.
-- Added member, project, and note editing for split allocation detail rows on the Transactions page.
-- Added allocation-category focus when opening Transactions from Income & Expense categories, including focused row amounts and CSV export output.
-- Updated more dashboards, reports, calendar summaries, category views, and AI category analysis flows to rely on allocation effects.
-- Preserved existing multi-allocation detail rows during ordinary parent-transaction edits unless allocation data is explicitly submitted through the split flow.
-- Improved sidebar dropdowns, Quick Entry spacing, split-entry layout, allocation child rows, settings-page dialogs, currency chips, and recent-transaction display.
-- Fixed native browser dialogs/prompts, old native select menus, allocation drilldown amounts, dismissed notifications, and analysis/category summaries that could still fall back to parent category fields.
+- Added Local Assistant and AI Assistant as top-level chat modes with separate session pools, assistant avatars, and mode-specific quick scenarios.
+- Added a new assistant selection landing state for new conversations, plus an explicit switch action in the chat sidebar.
+- Added `chat:local` and `chat:ai` session scopes while keeping older chat scopes display-compatible.
+- Changed Local Query into a purely local query kernel that can answer by rule, ask for clarification, or return an unsupported boundary response instead of falling back to AI intent guessing.
+- Split assistant capabilities so Local Assistant exposes Query and Entry, while AI Assistant exposes Analysis and Free Chat.
+- Improved chat markdown rendering, including table display in AI-generated analysis answers.
+- Improved Chinese and English display consistency for categories and accounts in chat answers, draft-entry tables, and analysis contexts.
+- Fixed new-chat routing issues, accidental deletion of the top hint, web-preview abort errors, truncated AI answers, and ambiguous Alipay balance handling.
 
 #### Security and stability
 
-- Added service-side same-book checks before updating allocation metadata.
-- Reduced accidental allocation data loss by preserving existing split rows during ordinary parent-transaction edits.
-- Kept app-facing dialogs and prompts inside the renderer-controlled UI layer for more predictable desktop and preview behavior.
+- Added more consistent debug and audit fields for chat routing, including top mode, internal capability, route reason, query basis, data basis, and model usage.
+- Reduced accidental model calls by enforcing that Local Assistant query and entry flows do not silently invoke AI.
+- Maintained clear write boundaries: AI can assist with interpretation and analysis, while write-related flows still require user confirmation.
 
 ---
 
 ## Recent Releases
+
+### v0.3.10 - 2026-04-27
+
+**Focus: allocation effects, unified dialogs, and desktop interaction polish**
+
+- Added a unified in-app dialog layer for confirmation, notice, and prompt-style interactions.
+- Added a shared soft-select control for sidebar filters, settings fields, and form dropdowns.
+- Added member, project, and note editing for split allocation detail rows on the Transactions page.
+- Updated more dashboards, reports, calendar summaries, category views, and AI category analysis flows to rely on allocation effects.
+- Preserved existing multi-allocation detail rows during ordinary parent-transaction edits unless allocation data is explicitly submitted through the split flow.
+- Fixed native browser dialogs/prompts, old native select menus, allocation drilldown amounts, dismissed notifications, and analysis/category summaries that could still fall back to parent category fields.
+- Added service-side same-book checks before updating allocation metadata and reduced accidental allocation data loss during ordinary parent edits.
 
 ### v0.3.9 - 2026-04-26
 
@@ -92,6 +104,18 @@ This release continues the split-transaction rollout by making allocation effect
 - Improved budget balance display, year chips, filters, and footer alignment.
 - Improved bilingual local-preview runtime errors and fallback messages.
 - Fixed mismatches between month summaries and budget tables after switching months.
+
+---
+
+## 0.4 Series Highlights
+
+The 0.4 series begins by making XplorOne's chat model easier to understand: Local Assistant handles fast local query and entry workflows, while AI Assistant handles deeper analysis and broader conversation.
+
+- Split chat into clearer Local Assistant and AI Assistant experiences.
+- Tightened local query behavior so supported local finance queries do not silently fall back to AI guessing.
+- Improved chat session routing, assistant switching, and new-conversation landing behavior.
+- Improved bilingual account and category display in chat answers, draft-entry tables, and analysis contexts.
+- Reduced accidental model calls by enforcing clearer Local Assistant boundaries.
 
 ---
 
