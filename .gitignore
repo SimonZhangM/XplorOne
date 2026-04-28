@@ -1,1 +1,4 @@
 GITHUB_REPO_MEMORY.md
+
+# Local release artifacts are uploaded to GitHub Releases, not committed.
+releases/
