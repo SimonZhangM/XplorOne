@@ -5,6 +5,51 @@ It is based on the existing project changelog and rewritten in the newer public 
 
 ---
 
+# XplorOne v0.4.0
+
+Release date: 2026-04-28
+
+This release reorganizes chat into two clearer assistants: Local Assistant for fast local queries and entries, and AI Assistant for deeper analysis and open-ended conversation. It also tightens the local query boundary so basic finance queries no longer fall back to AI guessing, improves chat session routing and assistant switching, and adds better bilingual display for account and category names.
+
+## Added
+
+- Added the Local Assistant and AI Assistant top-level chat modes with separate session pools, assistant avatars, and mode-specific quick scenarios.
+- Added a new assistant selection landing state for new conversations, with a dedicated switch action in the chat sidebar.
+- Added `chat:local` and `chat:ai` session scopes while keeping older chat scopes display-compatible.
+- Added shared account alias recognition for local query and entry, including `ICBC` and the Chinese shorthand `工行` for Industrial and Commercial Bank of China.
+- Added a maintained chat capability matrix document for current query, entry, analysis, and free-talk boundaries.
+
+## Changed
+
+- Local query is now a purely local query kernel: it can answer by rule, ask for clarification, or return an unsupported boundary response, but it no longer calls AI intent fallback.
+- Local Assistant now exposes only Query and Entry; AI Assistant exposes only Analysis and Free Chat, while still allowing obvious basic queries to reuse the local query kernel.
+- New conversations now start from the assistant selection state instead of automatically entering one of the old four chat modules.
+- Chat launch requests from the home page are consumed once by token, so in-page assistant switching is no longer pulled back by an old launch request.
+- Public release notes are now maintained in the dedicated marketing documentation files instead of the old repository-root changelog.
+
+## Improved
+
+- Improved chat markdown rendering, especially table display in AI-generated analysis answers.
+- Improved Chinese and English display consistency for categories and accounts in chat answers, draft-entry tables, and analysis contexts.
+- Improved amount handling before sending analysis data to AI so cent-based database values are presented as readable currency amounts.
+- Improved AI analysis routing for questions about category growth, period comparison, safety cushion, and asset-liability overview.
+- Improved the new chat landing copy, assistant image placement, sidebar actions, and quick scenario chips.
+
+## Fixed
+
+- Fixed new-chat messages sometimes jumping into an older conversation instead of staying in the newly created conversation.
+- Fixed deleting the first visible chat item in a new conversation removing the top hint instead of the intended assistant message.
+- Fixed web-preview chat failures that surfaced as raw abort errors.
+- Fixed AI answers being truncated by unnecessary output limits.
+- Fixed account-balance questions such as Alipay balance being treated as ambiguous account lookups.
+
+## Security & Stability
+
+- Added more consistent debug and audit fields for chat routing, including top mode, internal capability, route reason, query basis, data basis, and model usage.
+- Reduced accidental model calls by enforcing that Local Assistant query and entry flows do not silently invoke AI.
+
+---
+
 # XplorOne v0.3.10
 
 Release date: 2026-04-27

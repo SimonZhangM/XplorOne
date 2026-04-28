@@ -6,8 +6,7 @@ D:\APP\marketing\github\
 ├── [✓] ROADMAP_zh-CN.md                      ← 中文公开路线图；用于中文读者理解产品方向、阶段重点和边界
 ├── [✓] SUPPORT.md                            ← 支持与反馈说明；用于承接用户提问、反馈渠道与基本求助方式
 ├── [✓] SUPPORT_zh-CN.md                      ← 中文支持与反馈说明；用于中文用户理解提问、报错和敏感信息边界
-├── [ ] LICENSE                               ← 开源许可证文件；用于明确仓库代码与内容的授权边界
-├── [ ] LICENSE-NOTICE.md                     ← 许可证补充说明；用于解释非标准授权、资源归属或商业限制
+├── [✓] LICENSE.md                            ← 专有授权声明；用于明确本仓库不是开源授权，并说明公开查看、反馈和商业使用边界
 ├── [local] GITHUB_REPO_MEMORY.md             ← 本地工作记忆文件；用于沉淀仓库维护口径，已通过 `.gitignore` 排除，不进入公开仓库
 ├── [✓] Github_Structure.md                   ← 仓库结构说明；用于记录当前已完成与待补齐的 GitHub 文件布局
 ├── [✓] .gitignore                            ← Git 忽略规则；用于排除本地生成文件、缓存文件与不应提交的临时内容
@@ -66,6 +65,7 @@ D:\APP\marketing\github\
   - `ROADMAP_zh-CN.md`
   - `SUPPORT.md`
   - `SUPPORT_zh-CN.md`
+  - `LICENSE.md`
   - `.github/ISSUE_TEMPLATE/bug_report.yml`
   - `.github/ISSUE_TEMPLATE/config.yml`
   - `docs/getting-started.*`
@@ -77,7 +77,6 @@ D:\APP\marketing\github\
   - `docs/faq.*`
   - `docs/assets/*.png`
 - 当前仍待补齐的 GitHub hub 文件包括：
-  - `LICENSE`
   - `LICENSE-NOTICE.md`
   - `.github/PULL_REQUEST_TEMPLATE.md`
   - `community/welcome-to-xplorone.md`
