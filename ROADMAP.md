@@ -264,8 +264,8 @@ The most useful feedback explains:
 
 Use:
 
-- [Discussions](../../discussions) for roadmap ideas and product discussion
-- [Issues](../../issues) for clear bugs and actionable problems
+- [Discussions](https://github.com/SimonZhangM/XplorOne/discussions) for roadmap ideas and product discussion
+- [Issues](https://github.com/SimonZhangM/XplorOne/issues) for clear bugs and actionable problems
 - [Support](./SUPPORT.md) for support guidance
 
 Please do not post private financial data, API keys, Local API tokens, MCP tokens, license codes, or unredacted screenshots publicly.

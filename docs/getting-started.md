@@ -9,7 +9,7 @@ This guide helps you complete your first usable workflow:
 1. download and install XplorOne
 2. create or open a book
 3. understand the Home workbench
-4. record your first transaction
+4. record your first transaction with Quick Entry
 5. review your transactions
 6. open reports and financial views
 7. optionally enable AI features
@@ -20,7 +20,7 @@ For a broader feature map, see [Feature Overview](./feature-overview.md).
 
 ## 1\. Download and Install
 
-Download the latest Windows release from [GitHub Releases](../../releases).
+Download the latest Windows release from [GitHub Releases](https://github.com/SimonZhangM/XplorOne/releases).
 
 After downloading:
 
@@ -63,14 +63,14 @@ From the Home workbench, you can typically review:
 The Home page is not just a dashboard.  
 It is the starting point for daily financial work.
 
-## 4\. Record Your First Transaction
+## 4\. Use Quick Entry for Your First Transaction
 
-The easiest way to begin is to record one transaction.
+The easiest way to begin is to record one transaction with Quick Entry.
 
 You can start from:
 
-* the **Record** entry in the left sidebar
-* the **Record** shortcut on the Home workbench
+* the **Quick Entry** entry in the left sidebar
+* the **Quick Entry** shortcut on the Home workbench
 
 For your first transaction, keep it simple:
 
@@ -122,14 +122,17 @@ AI features are optional.
 XplorOne remains usable as a local-first finance workspace even without an API key.  
 You can still record transactions, review reports, use local views, and run basic queries.
 
-Add your own API key only if you want AI-assisted capabilities such as:
+Add your own API key only if you want AI Assistant capabilities such as:
 
-* natural-language query
-* entry drafts
-* analysis and interpretation
+* financial analysis
+* trend explanation
+* model-assisted interpretation in workflows that explicitly use AI
+* entry draft assistance where model participation is enabled
 * broader finance-related chat workflows
 
-AI can help with query, interpretation, analysis, and entry drafts, but write actions require confirmation.  
+Local Assistant query and entry workflows remain local-first where supported by the local kernel.
+
+AI Assistant can help with analysis and broader finance-related conversation, but write actions require confirmation.
 Nothing is written automatically by AI.
 
 For setup details, see [BYOK Setup](./byok-setup.md).  
@@ -168,7 +171,7 @@ After completing your first workflow, you can continue with:
 
 Use:
 
-* [Discussions](../../discussions) for questions, feedback, ideas, and product discussion
-* [Issues](../../issues) for bug reports, installer problems, and clearly actionable issues
-* [Releases](../../releases) for downloads and release notes
+* [Discussions](https://github.com/SimonZhangM/XplorOne/discussions) for questions, feedback, ideas, and product discussion
+* [Issues](https://github.com/SimonZhangM/XplorOne/issues) for bug reports, installer problems, and clearly actionable issues
+* [Releases](https://github.com/SimonZhangM/XplorOne/releases) for downloads and release notes
 

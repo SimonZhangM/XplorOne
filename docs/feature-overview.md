@@ -195,30 +195,38 @@ This view is especially useful for users who want to understand not only monthly
 
 ## 6. Chat
 
-Chat is the AI-assisted interaction area.
+Chat is organized around two assistants:
 
-It can support several types of workflows:
+- **Local Assistant**
+- **AI Assistant**
 
-- query
-- entry drafts
-- analysis
-- free finance-related conversation
+### Local Assistant
 
-AI features are optional.
+Local Assistant is designed for fast local workflows.
 
-XplorOne remains usable without an API key.
-Core local bookkeeping, reports, and basic queries work without model configuration.
+It can help with:
 
-If you configure your own API key, AI can help with:
+- local finance queries
+- transaction lookup
+- basic summaries
+- entry draft workflows
 
-- natural-language finance questions
-- structured query interpretation
-- entry draft preparation
+Supported local query and entry flows are handled without silently falling back to AI guessing.
+
+### AI Assistant
+
+AI Assistant is designed for deeper interpretation and broader finance-related conversation.
+
+It can help with:
+
+- financial analysis
 - trend explanation
-- broader finance-related analysis
+- period comparison
+- broader finance-related chat
 
-AI does not automatically write to the ledger.
-Write actions require user confirmation.
+AI Assistant requires a user-configured model API key.
+
+Write actions still require user confirmation.
 
 For more details, see:
 

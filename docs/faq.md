@@ -67,10 +67,10 @@ A model API key is only required for optional AI-assisted features.
 
 AI-assisted features may include:
 
-- natural-language query interpretation
-- entry draft preparation
-- financial analysis and explanation
+- AI Assistant analysis and explanation
 - broader finance-related chat workflows
+- model-assisted interpretation in workflows that explicitly use AI
+- entry draft assistance where model participation is enabled
 
 AI is an enhancement layer, not the foundation of the product.
 
@@ -88,7 +88,9 @@ This applies especially to:
 - entry draft submission
 - workflows that would change ledger data
 
-XplorOne is designed so that AI can assist with query, interpretation, analysis, and draft preparation, while the user remains responsible for confirming writes.
+XplorOne is designed so that Local Assistant can help with supported local query and entry workflows, while AI Assistant can help with analysis and broader finance-related conversation.
+
+The user remains responsible for confirming writes.
 
 ## 8. Is my financial data uploaded to the cloud by default?
 
@@ -152,7 +154,15 @@ BYOK setup is only about model API keys.
 
 Local API and MCP tokens are managed separately and are not required for normal desktop use.
 
-## 13. What is MCP in XplorOne?
+## 13. What is the difference between Local Assistant and AI Assistant?
+
+Local Assistant handles fast local query and entry workflows.
+
+AI Assistant handles analysis and broader finance-related conversation.
+
+Supported Local Assistant flows do not silently fall back to AI guessing, while AI Assistant uses the user-configured model service when AI capabilities are needed.
+
+## 14. What is MCP in XplorOne?
 
 MCP is an optional local integration path for external agent workflows.
 
@@ -168,7 +178,7 @@ The current MCP/query path is:
 
 MCP is not required for normal bookkeeping, reports, Quick Entry, or in-app AI workflows.
 
-## 14. Does MCP directly read the database?
+## 15. Does MCP directly read the database?
 
 No.
 
@@ -176,7 +186,7 @@ Current MCP access goes through XplorOne’s controlled local API and query laye
 
 It does not directly read the database and does not bypass the application’s query boundary.
 
-## 15. Can MCP write or edit my ledger?
+## 16. Can MCP write or edit my ledger?
 
 No.
 
@@ -184,7 +194,7 @@ The current MCP path is read-only.
 
 It does not expose write actions.
 
-## 16. Are backups and exported files safe to share?
+## 17. Are backups and exported files safe to share?
 
 Backups and exported files may contain sensitive financial data.
 
@@ -201,7 +211,7 @@ Users should not publicly share:
 
 If you need support, remove private financial data and credentials before posting.
 
-## 17. Do exported ledger files include my API key?
+## 18. Do exported ledger files include my API key?
 
 Exported ledger files should not expose model API keys or MCP tokens as plain text.
 
@@ -209,7 +219,7 @@ Some full-app backup workflows may include protected credential metadata for sam
 
 If you move data to another machine, you may need to reconfigure model API keys or local integration tokens.
 
-## 18. Can I migrate XplorOne data to another computer?
+## 19. Can I migrate XplorOne data to another computer?
 
 Depending on the backup or export workflow, financial data may be portable.
 
@@ -222,7 +232,7 @@ When moving to another machine, you may need to:
 - regenerate local API or MCP tokens
 - re-test AI model configuration
 
-## 19. Does XplorOne support every bank or payment platform import format?
+## 20. Does XplorOne support every bank or payment platform import format?
 
 Not necessarily.
 
@@ -232,7 +242,7 @@ Users should not assume every bank, payment platform, or accounting export forma
 
 Imported data should be reviewed by the user.
 
-## 20. Is XplorOne a tax, legal, or accounting compliance service?
+## 21. Is XplorOne a tax, legal, or accounting compliance service?
 
 No.
 
@@ -248,7 +258,7 @@ It is not:
 
 Users remain responsible for their own financial decisions and local compliance requirements.
 
-## 21. Is XplorOne open source?
+## 22. Is XplorOne open source?
 
 No, not unless explicitly stated otherwise.
 
@@ -256,17 +266,17 @@ XplorOne is proprietary software.
 
 This repository serves as the public product hub for documentation, releases, roadmap updates, and community feedback. It is not a full open-source code landing page.
 
-For details, see [License and Usage](../LICENSE-NOTICE.md) when available.
+For details, see [LICENSE.md](../LICENSE.md).
 
-## 22. Where should I download XplorOne?
+## 23. Where should I download XplorOne?
 
 Use the official download links provided by this repository or the official website.
 
-For GitHub users, start from [GitHub Releases](../../releases).
+For GitHub users, start from [GitHub Releases](https://github.com/SimonZhangM/XplorOne/releases).
 
 Make sure you are downloading from an official source.
 
-## 23. What is the difference between GitHub Releases and the official website?
+## 24. What is the difference between GitHub Releases and the official website?
 
 GitHub Releases can serve as a public release and version history channel.
 
@@ -274,7 +284,7 @@ The official website may provide product pages, download guidance, documentation
 
 Depending on the release channel, the download experience may differ, but users should always use official links.
 
-## 24. Why is there a Web preview if the desktop app is the official release?
+## 25. Why is there a Web preview if the desktop app is the official release?
 
 Web preview is used for development and internal preview.
 
@@ -282,15 +292,15 @@ It is not the official end-user release form.
 
 Some desktop capabilities, such as system file dialogs or local desktop integration, may not behave the same way in Web preview.
 
-## 25. Why is Windows the current official release line?
+## 26. Why is Windows the current official release line?
 
 XplorOne is currently focused on making the Windows desktop release stable and usable.
 
 Other platforms should not be assumed available unless explicitly published.
 
-For current availability, check [Releases](../../releases).
+For current availability, check [Releases](https://github.com/SimonZhangM/XplorOne/releases).
 
-## 26. What should I do if AI responses are in the wrong language?
+## 27. What should I do if AI responses are in the wrong language?
 
 When reporting a language issue, include:
 
@@ -299,11 +309,11 @@ When reporting a language issue, include:
 - model provider
 - expected response language
 - actual response language
-- whether the issue happened in Query, Entry, Analysis, or Free Chat
+- whether the issue happened in Local Assistant or AI Assistant
 
 XplorOne may consider the current message language, previous clear user language in the session, and UI language as fallback.
 
-## 27. What should I do if model connection testing fails?
+## 28. What should I do if model connection testing fails?
 
 Check:
 
@@ -316,17 +326,17 @@ Check:
 
 For more details, see [BYOK Setup](./byok-setup.md).
 
-## 28. Where should I ask questions or report problems?
+## 29. Where should I ask questions or report problems?
 
 Use:
 
-- [Discussions](../../discussions) for questions, ideas, feedback, and product discussion
-- [Issues](../../issues) for clear bugs, installer problems, and actionable reports
-- [Releases](../../releases) for downloads and release notes
+- [Discussions](https://github.com/SimonZhangM/XplorOne/discussions) for questions, ideas, feedback, and product discussion
+- [Issues](https://github.com/SimonZhangM/XplorOne/issues) for clear bugs, installer problems, and actionable reports
+- [Releases](https://github.com/SimonZhangM/XplorOne/releases) for downloads and release notes
 
 Before posting publicly, remove private financial data, API keys, local tokens, and personal information.
 
-## 29. What information should I include in a bug report?
+## 30. What information should I include in a bug report?
 
 A useful bug report usually includes:
 
@@ -341,7 +351,7 @@ A useful bug report usually includes:
 
 Do not include API keys, tokens, private financial data, or full unredacted logs.
 
-## 30. Where should I go next?
+## 31. Where should I go next?
 
 - [Getting Started](./getting-started.md) — complete your first workflow
 - [Feature Overview](./feature-overview.md) — understand the main product areas

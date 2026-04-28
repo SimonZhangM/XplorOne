@@ -8,7 +8,7 @@ XplorOne helps freelancers, one-person businesses, consultants, indie makers, an
 
 **Current status:** Windows release available · Core local bookkeeping, reports, and basic queries work without an API key · Your own API key is only needed for AI-assisted features · Write actions require confirmation · Local API and MCP integrations are token-protected local access paths · This repository is the public product hub for releases, documentation, and community feedback, not a full open-source code landing page.
 
-[Download on GitHub Releases](../../releases) · [Getting Started](./docs/getting-started.md) · [Discussions](../../discussions)
+[Download on GitHub Releases](https://github.com/SimonZhangM/XplorOne/releases) · [Getting Started](./docs/getting-started.md) · [Discussions](https://github.com/SimonZhangM/XplorOne/discussions)
 
 ---
 
@@ -19,22 +19,22 @@ XplorOne helps freelancers, one-person businesses, consultants, indie makers, an
 - **Your books stay on your computer by default**  
   XplorOne is built around a local-first workflow, so your financial data does not begin as “just another cloud database”.
 
-- **AI helps you query, draft entries, and analyze your finances — not just chat about them**  
-  Ask questions in natural language, review patterns, prepare entry drafts, and understand what is happening in your books with structured financial context.
+- **Local Assistant and AI Assistant serve different finance workflows**
+  Local Assistant helps with local query and entry workflows. AI Assistant helps with deeper analysis and broader finance-related conversations.
 
 - **Built for one-person businesses and small studios, not enterprise finance teams**  
   XplorOne is designed for people running their own work and financial workflow, not for large multi-team accounting operations.
 
 - **Clear boundaries are part of the product**  
-  AI can assist with query, interpretation, analysis, and entry drafts, but write actions always require confirmation.
+  Supported local query flows do not silently fall back to AI guessing, and write actions always require confirmation.
 
 ## What You Can Do Today
 
 - **Manage multiple books, accounts, categories, budgets, and transactions**  
   Build a financial structure that is easier to review than a flat list of records.
 
-- **Use AI for query, entry drafts, and analysis**  
-  Work with your data more directly instead of relying only on filters, exports, or manual bookkeeping review.
+- **Use Local Assistant and AI Assistant for finance workflows**
+  Use Local Assistant for local queries and entry workflows, and AI Assistant for model-assisted analysis and broader finance-related conversation.
 
 - **Review cash flow, income, expenses, assets, liabilities, and charts**  
   Understand trends, category structure, account states, and broader financial patterns.
@@ -68,28 +68,26 @@ XplorOne is designed around a local-first desktop workflow.
 
 XplorOne remains usable as a local-first finance workspace even without an API key. The API key only unlocks AI-assisted capabilities on top of the core local workflow.
 
-AI can help with:
+XplorOne separates assistant workflows:
 
-- **query**
-- **interpretation**
-- **analysis**
-- **entry drafts**
+- **Local Assistant** helps with supported local query and entry workflows.
+- **AI Assistant** helps with deeper analysis and broader finance-related conversations.
 
 But:
 
 - **write actions require user confirmation**
 - **nothing is written automatically**
 
-This means XplorOne is not “upload everything to the cloud and let the model mutate your books”. It is designed to query, draft, and analyze against a local-first ledger workflow with explicit write boundaries.
+This means XplorOne is not “upload everything to the cloud and let the model mutate your books”. It is designed to keep local workflows local where supported, use model assistance only where appropriate, and preserve explicit write boundaries.
 
 For more details, see [Privacy & AI Boundaries](./docs/privacy-and-ai-boundaries.md).
 
 ## Quick Start
 
-1. [Download the latest Windows release](../../releases)  
+1. [Download the latest Windows release](https://github.com/SimonZhangM/XplorOne/releases)
 2. Create or open a book after first launch  
 3. Start with local bookkeeping, reports, and basic queries right away  
-4. Add your own API key if you want AI-assisted query, entry drafts, and analysis
+4. Add your own API key if you want AI Assistant analysis and broader finance-related conversations
 
 For full setup details, see [Getting Started](./docs/getting-started.md) and [BYOK Setup](./docs/byok-setup.md).
 
@@ -115,9 +113,9 @@ It is designed as the main public-facing hub for the product, rather than a sour
 
 ## Help and Feedback
 
-- **[Discussions](../../discussions)** — questions, feedback, ideas, and product discussion
-- **[Issues](../../issues)** — bug reports, installer problems, and clearly actionable issues
-- **[Releases](../../releases)** — downloads and release notes
+- **[Discussions](https://github.com/SimonZhangM/XplorOne/discussions)** — questions, feedback, ideas, and product discussion
+- **[Issues](https://github.com/SimonZhangM/XplorOne/issues)** — bug reports, installer problems, and clearly actionable issues
+- **[Releases](https://github.com/SimonZhangM/XplorOne/releases)** — downloads and release notes
 - **[Changelog](./CHANGELOG.md)** — major release highlights
 - **[Software Release History](./docs/software-release-history.md)** — detailed user-facing release notes
 
@@ -126,6 +124,7 @@ It is designed as the main public-facing hub for the product, rather than a sour
 XplorOne is proprietary software and is not released under an open source license unless expressly stated otherwise.
 
 - The source code in this repository is not offered under an open source license.
+- Repository-level proprietary license terms are described in [LICENSE.md](./LICENSE.md).
 - Official desktop releases are governed by the applicable [EULA.md](./EULA.md).
 - Third-party components remain subject to their own license terms. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
 - The XplorOne name, logo, and related branding are proprietary and may not be used without permission.

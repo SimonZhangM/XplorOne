@@ -15,10 +15,12 @@ A model API key is only required for AI-assisted features.
 
 Depending on your enabled workflows, AI-assisted features may include:
 
-- natural-language query interpretation
-- entry draft preparation
-- financial analysis and explanation
+- AI Assistant analysis and explanation
 - broader finance-related chat workflows
+- model-assisted interpretation in workflows that explicitly use AI
+- entry draft assistance where model participation is enabled
+
+Local Assistant query remains a local-first workflow and does not require an API key for supported local queries.
 
 You do **not** need a model API key for:
 
@@ -80,20 +82,20 @@ XplorOne separates these actions:
 Saving a configuration does not always mean it is already active.
 If AI features are not using the expected model, check which configuration is currently activated.
 
-## 4. Try Your First AI Query
+## 4. Try Your First AI Assistant Workflow
 
-After activating the model configuration, you can try an AI-assisted query in Chat.
+After activating the model configuration, you can try an AI Assistant workflow in Chat.
 
 Example questions:
 
-> How much did I spend this month?
-
-> What are my top expense categories this year?
-
 > Summarize my income and expenses this month.
 
-Some basic queries may be resolved locally without model participation.
-AI-assisted interpretation is used when natural-language understanding or analysis requires model help.
+> Explain why my dining expenses increased this quarter.
+
+> What patterns should I review before planning next month's budget?
+
+Supported Local Assistant queries are handled by the local query kernel without requiring a model API key.
+AI Assistant is used when you intentionally enter model-assisted analysis or broader finance-related conversation.
 
 ## 5. API Key Storage
 

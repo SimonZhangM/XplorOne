@@ -47,10 +47,10 @@ A user-configured model API key is required only when you want AI-assisted capab
 
 Depending on the enabled workflow, AI-assisted features may include:
 
-- natural-language query interpretation
-- entry draft preparation
-- financial analysis and explanation
+- AI Assistant analysis and explanation
 - broader finance-related chat workflows
+- model-assisted interpretation in workflows that explicitly use AI
+- entry draft assistance where model participation is enabled
 
 The API key connects XplorOne to the model service chosen by the user.
 
@@ -121,32 +121,35 @@ XplorOne aims to send task-relevant context, not the entire local database by de
 
 Users should choose a model provider they trust and review that provider’s own data and privacy terms.
 
-## 7. Query, Entry, Analysis, and Free Chat Boundaries
+## 7. Local Assistant and AI Assistant Boundaries
 
-XplorOne does not treat every AI interaction as the same type of operation.
+XplorOne does not treat every assistant interaction as the same type of operation.
 
-### Query
+### Local Assistant query
 
-Query workflows are local-first.
+In the current chat structure, Local Assistant query is handled by the local query kernel.
 
-Many queries can be resolved directly from local ledger data.
-Some queries may use a model to interpret the user’s natural-language request into a structured query.
+It can answer by local rules, ask for clarification, or return an unsupported boundary response instead of silently falling back to AI intent guessing.
 
-### Entry
+Supported local queries do not require a model API key.
+
+### Local Assistant entry
 
 Entry workflows prepare drafts.
 
-AI may help turn a natural-language description into an entry draft, but the draft must be reviewed and confirmed by the user before anything is written.
+Entry workflows prepare drafts, and the draft must be reviewed and confirmed by the user before anything is written.
 
-### Analysis
+If model participation is enabled in a workflow, it remains part of an explicit assistant flow rather than an automatic write path.
 
-Analysis workflows may use structured financial context to generate explanations, trends, and suggestions.
+### AI Assistant analysis
+
+AI Assistant analysis may use structured financial context to generate explanations, trends, and suggestions.
 
 This is intended to help users understand their financial data, not to replace user judgment.
 
-### Free Chat
+### AI Assistant free chat
 
-Free chat is for broader finance-related conversations.
+AI Assistant free chat is for broader finance-related conversations.
 
 It is not the same as direct ledger query.
 In the current release line, free chat is not positioned as the default path for direct ledger access.
@@ -163,7 +166,9 @@ This applies especially to:
 - entry draft submission
 - any workflow that would change ledger data
 
-XplorOne is designed so that AI can assist with query, interpretation, analysis, and draft preparation, while the user remains responsible for confirming writes.
+XplorOne is designed so that Local Assistant can help with supported local query and entry workflows, while AI Assistant can help with analysis and broader finance-related conversation.
+
+The user remains responsible for confirming writes.
 
 ## 9. Local API and MCP Read-Only Boundary
 

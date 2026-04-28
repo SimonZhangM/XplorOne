@@ -264,8 +264,8 @@ XplorOne 当前并不试图成为：
 
 你可以使用：
 
-- [Discussions](../../discussions) 反馈路线图想法和产品讨论
-- [Issues](../../issues) 提交明确 bug 和可处理的问题
+- [Discussions](https://github.com/SimonZhangM/XplorOne/discussions) 反馈路线图想法和产品讨论
+- [Issues](https://github.com/SimonZhangM/XplorOne/issues) 提交明确 bug 和可处理的问题
 - [支持说明](./SUPPORT_zh-CN.md) 了解反馈方式
 
 请不要在公开反馈中发布私人财务数据、API Key、本地 API token、MCP token、授权码或未脱敏截图。

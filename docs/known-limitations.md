@@ -43,10 +43,12 @@ Without an API key, XplorOne can still function as a local-first finance workspa
 
 If you configure your own API key, AI can help with:
 
-- natural-language query
-- entry draft preparation
-- financial analysis and interpretation
+- AI Assistant analysis and interpretation
 - broader finance-related chat workflows
+- model-assisted interpretation in workflows that explicitly use AI
+- entry draft assistance where model participation is enabled
+
+Local Assistant query and entry workflows are designed to remain usable without a model API key where supported by the local kernel.
 
 Current AI boundaries:
 
@@ -200,15 +202,15 @@ When in doubt, check:
 - [README](../README.md)
 - [Feature Overview](./feature-overview.md)
 - [Software Release History](./software-release-history.md)
-- [Releases](../../releases)
+- [Releases](https://github.com/SimonZhangM/XplorOne/releases)
 
 ## 13. When These Limitations Matter
 
 If one of these limitations affects your workflow, you can:
 
-- ask a question in [Discussions](../../discussions)
-- report a clear bug in [Issues](../../issues)
-- check [Releases](../../releases) for current availability
+- ask a question in [Discussions](https://github.com/SimonZhangM/XplorOne/discussions)
+- report a clear bug in [Issues](https://github.com/SimonZhangM/XplorOne/issues)
+- check [Releases](https://github.com/SimonZhangM/XplorOne/releases) for current availability
 - review [Roadmap](../ROADMAP.md) for direction-level information when available
 
 Please avoid posting private financial data, API keys, local tokens, or screenshots containing sensitive information.

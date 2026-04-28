@@ -7,6 +7,8 @@ D:\APP\marketing\github\
 ├── [✓] SUPPORT.md                            ← 支持与反馈说明；用于承接用户提问、反馈渠道与基本求助方式
 ├── [✓] SUPPORT_zh-CN.md                      ← 中文支持与反馈说明；用于中文用户理解提问、报错和敏感信息边界
 ├── [✓] LICENSE.md                            ← 专有授权声明；用于明确本仓库不是开源授权，并说明公开查看、反馈和商业使用边界
+├── [✓] EULA.md                               ← 终端用户许可协议；用于约束官方桌面版本的安装、使用与分发边界
+├── [✓] THIRD_PARTY_NOTICES.md                ← 第三方组件声明；用于说明依赖组件仍受其各自许可证约束
 ├── [local] GITHUB_REPO_MEMORY.md             ← 本地工作记忆文件；用于沉淀仓库维护口径，已通过 `.gitignore` 排除，不进入公开仓库
 ├── [✓] Github_Structure.md                   ← 仓库结构说明；用于记录当前已完成与待补齐的 GitHub 文件布局
 ├── [✓] .gitignore                            ← Git 忽略规则；用于排除本地生成文件、缓存文件与不应提交的临时内容
@@ -66,6 +68,8 @@ D:\APP\marketing\github\
   - `SUPPORT.md`
   - `SUPPORT_zh-CN.md`
   - `LICENSE.md`
+  - `EULA.md`
+  - `THIRD_PARTY_NOTICES.md`
   - `.github/ISSUE_TEMPLATE/bug_report.yml`
   - `.github/ISSUE_TEMPLATE/config.yml`
   - `docs/getting-started.*`
@@ -77,6 +81,5 @@ D:\APP\marketing\github\
   - `docs/faq.*`
   - `docs/assets/*.png`
 - 当前仍待补齐的 GitHub hub 文件包括：
-  - `LICENSE-NOTICE.md`
   - `.github/PULL_REQUEST_TEMPLATE.md`
   - `community/welcome-to-xplorone.md`

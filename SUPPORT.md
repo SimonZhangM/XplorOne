@@ -16,7 +16,7 @@ Before opening a new issue or discussion, please check:
 - [Known Limitations](./docs/known-limitations.md)
 - [BYOK Setup](./docs/byok-setup.md)
 - [Privacy & AI Boundaries](./docs/privacy-and-ai-boundaries.md)
-- [Releases](../../releases)
+- [Releases](https://github.com/SimonZhangM/XplorOne/releases)
 
 Also make sure you are using the latest available release unless you are intentionally testing an older version.
 
@@ -24,7 +24,7 @@ Also make sure you are using the latest available release unless you are intenti
 
 ### General questions, ideas, and usage discussion
 
-Use [Discussions](../../discussions) for:
+Use [Discussions](https://github.com/SimonZhangM/XplorOne/discussions) for:
 
 - product questions
 - usage questions
@@ -37,7 +37,7 @@ Discussions are the best place when the topic is exploratory or not clearly a bu
 
 ### Bugs and actionable problems
 
-Use [Issues](../../issues) for:
+Use [Issues](https://github.com/SimonZhangM/XplorOne/issues) for:
 
 - reproducible bugs
 - installer problems
@@ -49,6 +49,8 @@ Use [Issues](../../issues) for:
 - MCP or Local API problems that can be described clearly
 
 Issues work best when the report includes steps, environment details, and expected vs. actual behavior.
+
+When opening an issue, please use the available issue form instead of posting an empty report.
 
 ### Security or sensitive reports
 
@@ -143,7 +145,10 @@ For AI or BYOK-related problems, include:
 - base URL type, but not secret values
 - model name
 - whether connection test passed
-- which chat mode was used:
+- which assistant was used:
+  - Local Assistant
+  - AI Assistant
+- which capability was involved:
   - Query
   - Entry
   - Analysis
@@ -205,7 +210,7 @@ If a sample file is needed, create a fake or redacted sample that does not conta
 
 ## 9. Feature Requests
 
-Feature requests are welcome in [Discussions](../../discussions).
+Feature requests are welcome in [Discussions](https://github.com/SimonZhangM/XplorOne/discussions).
 
 A helpful feature request usually explains:
 
@@ -238,6 +243,6 @@ Commercial support terms, if any, are handled separately from public GitHub supp
 - [Known Limitations](./docs/known-limitations.md)
 - [BYOK Setup](./docs/byok-setup.md)
 - [Privacy & AI Boundaries](./docs/privacy-and-ai-boundaries.md)
-- [Releases](../../releases)
-- [Discussions](../../discussions)
-- [Issues](../../issues)
+- [Releases](https://github.com/SimonZhangM/XplorOne/releases)
+- [Discussions](https://github.com/SimonZhangM/XplorOne/discussions)
+- [Issues](https://github.com/SimonZhangM/XplorOne/issues)
