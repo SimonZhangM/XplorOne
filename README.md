@@ -8,7 +8,7 @@ XplorOne helps freelancers, one-person businesses, consultants, indie makers, an
 
 **Current status:** Windows release available · Core local bookkeeping, reports, and basic queries work without an API key · Your own API key is only needed for AI-assisted features · Write actions require confirmation · Local API and MCP integrations are token-protected local access paths · This repository is the public product hub for releases, documentation, and community feedback, not a full open-source code landing page.
 
-[Download on GitHub Releases](https://github.com/SimonZhangM/XplorOne/releases) · [Getting Started](./docs/getting-started.md) · [Discussions](https://github.com/SimonZhangM/XplorOne/discussions)
+[Download on GitHub Releases](https://github.com/SimonZhangM/XplorOne/releases) · [Getting Started](./docs/getting-started.md) · [WAIC Project Plan](./docs/waic/XplorOne-WAIC-FutureTech-OPC-Project-Plan.pdf) · [Discussions](https://github.com/SimonZhangM/XplorOne/discussions)
 
 ---
 
