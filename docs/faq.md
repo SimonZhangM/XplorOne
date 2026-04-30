@@ -270,7 +270,7 @@ XplorOne is proprietary software.
 
 This repository serves as the public product hub for documentation, releases, roadmap updates, and community feedback. It is not a full open-source code landing page.
 
-For details, see [LICENSE.md](../LICENSE.md).
+For details, see [LICENSE](../LICENSE).
 
 ## 23. Where should I download XplorOne?
 
@@ -358,11 +358,48 @@ A useful bug report usually includes:
 
 Do not include API keys, tokens, private financial data, or full unredacted logs.
 
-## 31. Where should I go next?
+## 31. Where is my data stored on my computer?
+
+XplorOne stores core app data in the local application data environment on the user’s computer.
+
+The exact path may vary by operating system, app packaging, and release channel. In general, users should treat XplorOne books, backups, exported files, screenshots, and logs as sensitive financial materials.
+
+For more details, see [Data Storage and Backup](./data-storage-and-backup.md).
+
+## 32. How do I move my books and credentials to another computer?
+
+Use backup, restore, export, import, or archive workflows where available.
+
+Financial data may be portable, but protected credentials may depend on the current machine or operating-system credential environment. After moving to another computer, you may need to reconfigure model API keys and regenerate local API or MCP tokens.
+
+For more details, see [Data Storage and Backup](./data-storage-and-backup.md).
+
+## 33. What data is sent during AI analysis?
+
+AI analysis may send task-relevant context to the model provider configured by the user.
+
+Depending on the workflow, this may include the user’s instruction, structured financial context, selected report or query context, recent conversation context, and optional personalization summary if enabled.
+
+XplorOne is designed to avoid uploading the entire local database by default for AI analysis.
+
+For more details, see [Privacy & AI Boundaries](./privacy-and-ai-boundaries.md), [AI Assistant Behavior](./ai-assistant-behavior.md), and [Privacy](../PRIVACY.md).
+
+## 34. What should I do if Windows SmartScreen or installer warnings appear?
+
+Only download XplorOne from official channels such as GitHub Releases or the official website.
+
+Before installing, check the release title, version number, file name, and any checksum information published with the release. If a warning appears and you are unsure whether the installer is authentic, do not continue until you have verified the download source.
+
+You can report installer concerns through Issues or security concerns through the process described in [Security](../SECURITY.md).
+
+## 35. Where should I go next?
 
 - [Getting Started](./getting-started.md) — complete your first workflow
 - [Feature Overview](./feature-overview.md) — understand the main product areas
 - [Privacy & AI Boundaries](./privacy-and-ai-boundaries.md) — understand data, AI, and integration boundaries
+- [Data Storage and Backup](./data-storage-and-backup.md) — understand where data lives and how backup/restore boundaries work
+- [AI Assistant Behavior](./ai-assistant-behavior.md) — understand Local Assistant and AI Assistant behavior
+- [Local API and MCP](./local-api-and-mcp.md) — understand external agent integration boundaries
 - [BYOK Setup](./byok-setup.md) — configure your own model API key
 - [Known Limitations](./known-limitations.md) — understand current release scope
 - [Support](../SUPPORT.md) — learn where to ask questions or report problems

@@ -14,6 +14,12 @@ XplorOne helps freelancers, one-person businesses, consultants, indie makers, an
 
 ![XplorOne main screenshot](./docs/assets/xplorone-main-screenshot.png)
 
+## Latest Release
+
+Current public release: **v0.4.1 for Windows**.
+
+Download from [GitHub Releases](https://github.com/SimonZhangM/XplorOne/releases) or xplorone.com when available. For a quick summary, see [Changelog](./CHANGELOG.md). For complete user-facing release notes, see [Software Release History](./docs/software-release-history.md).
+
 ## Why XplorOne
 
 - **Your books stay on your computer by default**  
@@ -118,13 +124,16 @@ It is designed as the main public-facing hub for the product, rather than a sour
 - **[Releases](https://github.com/SimonZhangM/XplorOne/releases)** — downloads and release notes
 - **[Changelog](./CHANGELOG.md)** — major release highlights
 - **[Software Release History](./docs/software-release-history.md)** — detailed user-facing release notes
+- **[Privacy](./PRIVACY.md)** — formal privacy statement for public users
+- **[Security](./SECURITY.md)** — security reporting and sensitive issue guidance
+- **[Screenshots](./docs/screenshots.md)** — visual product tour
 
 ## License and Usage
 
 XplorOne is proprietary software and is not released under an open source license unless expressly stated otherwise.
 
 - The source code in this repository is not offered under an open source license.
-- Repository-level proprietary license terms are described in [LICENSE.md](./LICENSE.md).
+- Repository-level proprietary license terms are described in [LICENSE](./LICENSE).
 - Official desktop releases are governed by the applicable [EULA.md](./EULA.md).
 - Third-party components remain subject to their own license terms. See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md).
 - The XplorOne name, logo, and related branding are proprietary and may not be used without permission.

@@ -163,6 +163,9 @@ After completing your first workflow, you can continue with:
 
 * [Feature Overview](./feature-overview.md) — understand the main product areas
 * [Privacy \& AI Boundaries](./privacy-and-ai-boundaries.md) — understand local data, AI, and integration boundaries
+* [Data Storage and Backup](./data-storage-and-backup.md) — understand local files, backups, restore, and migration boundaries
+* [AI Assistant Behavior](./ai-assistant-behavior.md) — understand Local Assistant and AI Assistant behavior
+* [Local API and MCP](./local-api-and-mcp.md) — understand external agent integration boundaries
 * [BYOK Setup](./byok-setup.md) — configure your own model API key for AI-assisted features
 * [Known Limitations](./known-limitations.md) — understand the current release scope
 * [Support](../SUPPORT.md) — learn where to ask questions or report problems

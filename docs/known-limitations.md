@@ -94,6 +94,8 @@ This is an intentional product direction.
 
 XplorOne is designed for users who want a desktop finance workspace with clear local data and AI boundaries.
 
+XplorOne currently does not provide automatic cloud sync. Cross-device use should be managed through backup, export, archive workflows, or future sync capabilities only when explicitly published.
+
 ## 6. No Full Multi-Platform Release Yet
 
 At the current stage, XplorOne should not be described as fully cross-platform.
@@ -223,5 +225,8 @@ Please avoid posting private financial data, API keys, local tokens, or screensh
 - [Getting Started](./getting-started.md) — complete your first workflow
 - [Feature Overview](./feature-overview.md) — understand the main product areas
 - [Privacy & AI Boundaries](./privacy-and-ai-boundaries.md) — understand data, AI, and integration boundaries
+- [Data Storage and Backup](./data-storage-and-backup.md) — understand backup, restore, and migration boundaries
+- [Local API and MCP](./local-api-and-mcp.md) — understand local integration boundaries
+- [AI Assistant Behavior](./ai-assistant-behavior.md) — understand assistant behavior and non-goals
 - [BYOK Setup](./byok-setup.md) — configure your own model API key
 - [Support](../SUPPORT.md) — learn where to ask questions or report problems

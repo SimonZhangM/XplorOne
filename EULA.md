@@ -1,6 +1,6 @@
 # XplorOne End User License Agreement (EULA)
 
-Last Updated: 2026.5.1
+Last Updated: 2026-04-30
 
 Please read this End User License Agreement ("Agreement") carefully before installing, accessing, or using XplorOne ("Software").
 

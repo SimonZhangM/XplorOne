@@ -6,7 +6,7 @@ XplorOne is designed as a local-first desktop finance workspace.
 
 This document explains how XplorOne handles local data, AI participation, model API keys, Local API tokens, MCP tokens, and write boundaries.
 
-It is a product-boundary explanation, not a legal privacy policy.
+It is a product-boundary explanation, not a legal privacy policy. For the public privacy statement, see [Privacy](../PRIVACY.md).
 
 ## 1. Local-First by Default
 

@@ -163,6 +163,9 @@ AI 不会自动写入账本。
 
 - [功能导览](./feature-overview_zh-CN.md) —— 了解 XplorOne 的主要功能区域
 - [隐私与 AI 边界](./privacy-and-ai-boundaries_zh-CN.md) —— 了解本地数据、AI 与集成边界
+- [数据保存与备份恢复](./data-storage-and-backup_zh-CN.md) —— 理解本地文件、备份、恢复和迁移边界
+- [AI 助手行为说明](./ai-assistant-behavior_zh-CN.md) —— 理解本地助手和 AI 助手行为
+- [本地 API 与 MCP](./local-api-and-mcp_zh-CN.md) —— 理解外部 agent 集成边界
 - [BYOK 配置说明](./byok-setup_zh-CN.md) —— 为 AI 辅助功能配置自己的模型 API Key
 - [当前限制说明](./known-limitations_zh-CN.md) —— 了解当前发布范围
 - [支持说明](../SUPPORT.md) —— 了解遇到问题时去哪里反馈

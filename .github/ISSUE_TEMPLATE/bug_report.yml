@@ -27,7 +27,7 @@ body:
     attributes:
       label: XplorOne version
       description: Which XplorOne version are you using? / 你正在使用哪个 XplorOne 版本？
-      placeholder: "v0.4.0"
+      placeholder: "v0.4.1"
     validations:
       required: true
 
@@ -46,30 +46,26 @@ body:
       label: Affected area
       description: Where did the issue happen? / 问题发生在哪个区域？
       options:
-        - Installation / Update
+        - Installer / Auto Update
         - Startup / App launch
-        - Quick Entry
+        - Quick Entry / 快速录入
         - Home Workbench
         - Calendar
-        - Lists - Ledger
-        - Lists - Income & Expense
-        - Lists - Accounts
-        - Reports - Cash Flow
-        - Reports - Income & Expense
-        - Reports - Assets & Liabilities
-        - Chat - Local Assistant
-        - Chat - AI Assistant
-        - Chat - Local Query
-        - Chat - Local Entry
-        - Chat - AI Analysis
-        - Chat - Free Chat
-        - Management - Budget
+        - Transactions / 流水
+        - Income & Expense / 收支
+        - Accounts / 账户
+        - Reports / 财报
+        - Budget / 预算
+        - Local Assistant / 本地助手
+        - AI Assistant / AI 助手
         - Management - Members
         - Management - Projects
         - Settings - Model Service / BYOK
         - Settings - Data / Backup / Restore
-        - Local API / MCP
-        - Import / Export / Archive
+        - MCP / Local API
+        - Data Import / 导入
+        - Backup & Restore / 备份恢复
+        - Export / Archive
         - Licensing / Activation
         - Other
     validations:
@@ -85,7 +81,7 @@ body:
         - Installer or update problem
         - UI or layout problem
         - Incorrect result or calculation
-        - Transaction / ledger problem
+        - Transactions / ledger problem
         - Report or chart problem
         - Data import / export / backup / restore problem
         - AI / BYOK / model configuration problem

@@ -1,6 +1,6 @@
 # XplorOne Third-Party Notices
 
-Last Updated: 2026.5.1
+Last Updated: 2026-04-30
 
 This file provides the first notice-and-attribution baseline for third-party software components relevant to XplorOne.
 

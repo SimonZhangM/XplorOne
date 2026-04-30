@@ -369,6 +369,10 @@ For more details, see [Known Limitations](./known-limitations.md).
 
 - [Getting Started](./getting-started.md) — complete your first workflow
 - [Privacy & AI Boundaries](./privacy-and-ai-boundaries.md) — understand local data, AI, and integration boundaries
+- [Data Storage and Backup](./data-storage-and-backup.md) — understand where local data, backups, and exported files fit
+- [AI Assistant Behavior](./ai-assistant-behavior.md) — understand what Local Assistant and AI Assistant do
+- [Local API and MCP](./local-api-and-mcp.md) — understand external agent integration boundaries
+- [Screenshots](./screenshots.md) — browse a visual product tour
 - [BYOK Setup](./byok-setup.md) — configure your own API key for AI-assisted features
 - [Known Limitations](./known-limitations.md) — understand current release scope
 - [Support](../SUPPORT.md) — learn where to ask questions or report problems

@@ -16,6 +16,8 @@ Before opening a new issue or discussion, please check:
 - [Known Limitations](./docs/known-limitations.md)
 - [BYOK Setup](./docs/byok-setup.md)
 - [Privacy & AI Boundaries](./docs/privacy-and-ai-boundaries.md)
+- [Privacy](./PRIVACY.md)
+- [Security](./SECURITY.md)
 - [Releases](https://github.com/SimonZhangM/XplorOne/releases)
 
 Also make sure you are using the latest available release unless you are intentionally testing an older version.
@@ -184,7 +186,7 @@ Do **not** include:
 
 The current MCP path is read-only and goes through XplorOne’s controlled local API and query layers. It does not directly read the database.
 
-For details, see [Privacy & AI Boundaries](./docs/privacy-and-ai-boundaries.md).
+For details, see [Privacy & AI Boundaries](./docs/privacy-and-ai-boundaries.md) and [Local API and MCP](./docs/local-api-and-mcp.md).
 
 ## 8. Import, Export, Backup, or Data Problems
 
@@ -243,6 +245,11 @@ Commercial support terms, if any, are handled separately from public GitHub supp
 - [Known Limitations](./docs/known-limitations.md)
 - [BYOK Setup](./docs/byok-setup.md)
 - [Privacy & AI Boundaries](./docs/privacy-and-ai-boundaries.md)
+- [Privacy](./PRIVACY.md)
+- [Security](./SECURITY.md)
+- [Data Storage and Backup](./docs/data-storage-and-backup.md)
+- [AI Assistant Behavior](./docs/ai-assistant-behavior.md)
+- [Local API and MCP](./docs/local-api-and-mcp.md)
 - [Releases](https://github.com/SimonZhangM/XplorOne/releases)
 - [Discussions](https://github.com/SimonZhangM/XplorOne/discussions)
 - [Issues](https://github.com/SimonZhangM/XplorOne/issues)

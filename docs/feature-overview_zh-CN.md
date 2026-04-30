@@ -369,6 +369,10 @@ XplorOne 当前不是：
 
 - [快速开始](./getting-started_zh-CN.md) —— 完成第一次基础使用流程
 - [隐私与 AI 边界](./privacy-and-ai-boundaries_zh-CN.md) —— 理解本地数据、AI 与集成边界
+- [数据保存与备份恢复](./data-storage-and-backup_zh-CN.md) —— 理解本地数据、备份和导出文件的边界
+- [AI 助手行为说明](./ai-assistant-behavior_zh-CN.md) —— 理解本地助手和 AI 助手分别做什么
+- [本地 API 与 MCP](./local-api-and-mcp_zh-CN.md) —— 理解外部 agent 集成边界
+- [截图导览](./screenshots_zh-CN.md) —— 浏览产品视觉导览
 - [BYOK 配置说明](./byok-setup_zh-CN.md) —— 为 AI 辅助功能配置自己的模型 API Key
 - [当前限制说明](./known-limitations_zh-CN.md) —— 了解当前发布范围
 - [支持说明](../SUPPORT.md) —— 了解遇到问题时去哪里反馈
