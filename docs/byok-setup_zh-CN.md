@@ -240,4 +240,4 @@ BYOK 只是表示：
 - [功能导览](./feature-overview_zh-CN.md) —— 了解主要产品区域
 - [隐私与 AI 边界](./privacy-and-ai-boundaries_zh-CN.md) —— 理解本地数据、AI 与集成边界
 - [当前限制说明](./known-limitations_zh-CN.md) —— 了解当前发布范围
-- [支持说明](../SUPPORT.md) —— 了解遇到问题时去哪里反馈
+- [支持说明](../SUPPORT_zh-CN.md) —— 了解遇到问题时去哪里反馈

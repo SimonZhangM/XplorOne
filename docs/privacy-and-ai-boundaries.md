@@ -86,6 +86,12 @@ These tokens are different from model API keys.
 - **Local API tokens** protect access to XplorOne’s local HTTP API.
 - **MCP client tokens** authorize external agents such as Codex or WorkBuddy to access XplorOne’s local read-only MCP/query path.
 
+| Credential | Purpose | Storage | Backup behavior | Reset |
+| --- | --- | --- | --- | --- |
+| Model API Key | AI provider access | Electron `safeStorage` or equivalent system-protected credential storage | protected metadata may be included in full-app backup for same-machine recovery; may require reconfiguration on a new machine | replace in Model Settings |
+| Local API Token | local HTTP API access | generated and persisted by XplorOne’s local API token store | treat as a local credential; may require regeneration after migration, restore, or token exposure | regenerate or reset in local API settings where supported |
+| MCP Client Token | external agent access | Electron `safeStorage` or equivalent system-protected credential storage | protected metadata may be included in full-app backup for same-machine recovery; may require regeneration on a new machine | regenerate per client in MCP settings |
+
 Local API and MCP access are intended for local loopback integration.
 
 They are not meant to be treated as public web API credentials.
@@ -199,7 +205,7 @@ XplorOne includes backup, restore, export, import, and archive workflows dependi
 
 General boundaries:
 
-- Ledger exports and archive packages are intended to preserve financial data, not expose plain-text credentials.
+- Transaction exports and archive packages are intended to preserve financial data, not expose plain-text credentials.
 - Model API keys and MCP tokens should not appear as plain text in exported ledger files.
 - Full-app backup workflows may include protected credential metadata for same-machine recovery.
 - Protected credential backups are not the same as portable plain-text credential exports.

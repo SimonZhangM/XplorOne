@@ -168,7 +168,7 @@ AI 不会自动写入账本。
 - [本地 API 与 MCP](./local-api-and-mcp_zh-CN.md) —— 理解外部 agent 集成边界
 - [BYOK 配置说明](./byok-setup_zh-CN.md) —— 为 AI 辅助功能配置自己的模型 API Key
 - [当前限制说明](./known-limitations_zh-CN.md) —— 了解当前发布范围
-- [支持说明](../SUPPORT.md) —— 了解遇到问题时去哪里反馈
+- [支持说明](../SUPPORT_zh-CN.md) —— 了解遇到问题时去哪里反馈
 
 ## 需要帮助？
 

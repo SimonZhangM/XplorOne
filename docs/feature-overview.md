@@ -17,7 +17,7 @@ The current XplorOne desktop navigation is organized around these main areas:
 - **Home**
 - **Calendar**
 - **Lists**
-  - Ledger
+  - Transactions
   - Income & Expense
   - Accounts
 - **Reports**
@@ -93,13 +93,13 @@ The Lists section is where you inspect structured financial records.
 
 It includes:
 
-- Ledger
+- Transactions
 - Income & Expense
 - Accounts
 
-### Ledger
+### Transactions
 
-Ledger is the transaction list and cash-flow review area.
+Transactions is the transaction list and cash-flow review area.
 
 Use it to:
 
@@ -109,7 +109,7 @@ Use it to:
 - inspect account-related activity
 - confirm whether transactions were recorded correctly
 
-Ledger focuses on financial movement.
+Transactions focuses on financial movement.
 It is the place to inspect what actually happened.
 
 ### Income & Expense
@@ -178,8 +178,8 @@ Use them to understand:
 - income and expense trends
 - category distribution
 
-This is different from Ledger cash flow.
-Ledger focuses on movement; Income & Expense reports focus on accounting-style income and expense structure.
+This is different from transaction cash flow.
+Transactions focus on movement; Income & Expense reports focus on accounting-style income and expense structure.
 
 ### Assets & Liabilities
 
