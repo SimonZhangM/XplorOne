@@ -35,63 +35,66 @@ XplorOne’s roadmap follows several product principles:
 
 ## Now
 
-The current focus is to stabilize the first public-facing release foundation.
+The current focus is to verify the v0.4.x Windows release line and keep the public product hub accurate as the desktop product continues to move forward.
 
-### Windows desktop release stability
+### v0.4.x Windows release verification
 
 Current priorities include:
 
-- improving Windows desktop release reliability
-- keeping the installer and update experience predictable
-- maintaining clear release notes
-- reducing installation and startup friction
+- verifying the Windows desktop release after each software update
+- checking installer behavior, startup behavior, and update paths
 - keeping release artifacts free of private runtime data, credentials, tokens, and local databases
+- publishing clear release notes, checksums, and download guidance where available
+- making sure GitHub Releases, Changelog, and Software Release History stay aligned
 
-### GitHub product hub foundation
+### Installer, auto-update, and release trust
 
 Current priorities include:
 
-- README and bilingual documentation
-- Getting Started
-- Feature Overview
-- Privacy & AI Boundaries
-- Known Limitations
-- BYOK Setup
-- FAQ
-- Support and issue templates
-- Changelog and user-facing release history
+- keeping installer and auto-update behavior predictable
+- clarifying official download channels
+- improving user-facing release notes
+- documenting security and privacy boundaries around downloads, backups, logs, and support files
+- maintaining legal and third-party notice files as public trust materials
 
-The goal is to make the GitHub repository a clear public product hub for releases, documentation, roadmap updates, and community feedback.
+### Import foundation and first-user onboarding
 
-### Core local finance workflow
+Current priorities include:
 
-Current priorities include improving the everyday workflow around:
+- improving the first-use path from download to first book
+- clarifying Quick Entry, Home, Transactions, Reports, and Budget workflows
+- preparing the import foundation for real-world statements and payment-platform exports
+- improving backup, restore, export, archive, and migration explanations
+- reducing places where users might misunderstand current release scope
 
-- Quick Entry
-- Home workbench
-- transaction review
-- accounts and categories
-- reports and financial views
-- backup, restore, export, import, and archive workflows
-
-The first product goal is simple:
+The near-term product goal is simple:
 
 > Users should be able to record financial activity, review their books, and understand their current financial state without needing AI.
 
-### AI-assisted workflows
+### AI Assistant behavior polish
 
 Current priorities include improving:
 
-- natural-language query
-- entry draft preparation
-- analysis and explanation
+- Local Assistant and AI Assistant separation
 - bilingual AI behavior
 - model configuration clarity
 - response language behavior
+- AI analysis discipline and financial-risk boundaries
 - safer confirmation flows for write-related workflows
 
 AI remains optional.
-Core local bookkeeping, reports, and basic queries should continue to work without a model API key.
+Core local bookkeeping, reports, and supported local queries should continue to work without a model API key.
+
+### Documentation maintenance
+
+The GitHub product hub foundation is now in place.
+
+Current documentation work is focused on maintenance rather than first-time scaffolding:
+
+- keeping README, FAQ, Support, Roadmap, and Known Limitations current
+- keeping Privacy, Security, AI, MCP, and data-storage docs aligned with implementation
+- keeping screenshots and WAIC materials accurate
+- keeping issue templates and community entry points useful
 
 ---
 

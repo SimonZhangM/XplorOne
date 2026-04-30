@@ -99,7 +99,7 @@ When dependencies or packaging change, update this file by:
 
 # XplorOne 第三方软件声明
 
-最后更新日期：2026.5.1
+最后更新日期：2026年4月30日
 
 本文件为 XplorOne 第三方软件组件的第一版声明与归属清单。
 

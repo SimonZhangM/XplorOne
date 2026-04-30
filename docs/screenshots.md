@@ -14,8 +14,6 @@ Home is the main finance workbench for review, summaries, recent transactions, a
 
 ## Transactions
 
-![Transactions screenshot](./assets/xplorone-ledger-page-cn.png)
-
 Transactions show recorded financial activity and support review of actual cash movement.
 
 ## Income and Expense
@@ -60,7 +58,4 @@ Analysis helps users interpret structured financial context.
 
 ## Local API and MCP
 
-![API and MCP screenshot](./assets/xplorone-API-MCP-page-cn.png)
-
 Local API and MCP are optional local integration surfaces for advanced agent workflows.
-

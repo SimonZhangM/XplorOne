@@ -86,6 +86,12 @@ XplorOne 可能会为本地集成路径使用本地 token。
 - **本地 API token** 用于保护 XplorOne 本地 HTTP API 的访问。
 - **MCP client token** 用于授权 Codex、WorkBuddy 这类外部 agent 访问 XplorOne 的本地只读 MCP / query 路径。
 
+| 凭据 | 用途 | 存储方式 | 备份行为 | 重置方式 |
+| --- | --- | --- | --- | --- |
+| 模型 API Key | 访问用户选择的模型服务商 | Electron `safeStorage` 或等效的系统级受保护凭据存储 | full-app 备份可能包含用于同机恢复的受保护元数据；迁移到新机器时可能需要重新配置 | 在模型设置中替换 |
+| 本地 API token | 保护本地 HTTP API 访问 | 由 XplorOne 的本地 API token store 生成并持久化 | 应视为本地凭据；迁移、恢复或 token 暴露后可能需要重新生成 | 在支持的本地 API 设置中重新生成或重置 |
+| MCP client token | 授权外部 agent 访问 | Electron `safeStorage` 或等效的系统级受保护凭据存储 | full-app 备份可能包含用于同机恢复的受保护元数据；迁移到新机器时可能需要重新生成 | 在 MCP 设置中按客户端重新生成 |
+
 本地 API 与 MCP 访问主要面向本机回环环境中的本地集成。
 
 它们不应该被当作公开 Web API 凭据使用。
@@ -241,4 +247,4 @@ XplorOne 不是：
 - [功能导览](./feature-overview_zh-CN.md) —— 了解主要产品区域
 - [BYOK 配置说明](./byok-setup_zh-CN.md) —— 配置自己的模型 API Key
 - [当前限制说明](./known-limitations_zh-CN.md) —— 了解当前发布范围
-- [支持说明](../SUPPORT.md) —— 了解遇到问题时去哪里反馈
+- [支持说明](../SUPPORT_zh-CN.md) —— 了解遇到问题时去哪里反馈
