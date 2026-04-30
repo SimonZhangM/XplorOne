@@ -6,7 +6,7 @@
 
 XplorOne 帮助自由职业者、一人公司经营者、顾问、独立开发者、小型工作室主理人更清楚地看懂收入、支出、现金流、预算、账户结构和财务变化，而不是把整个财务工作流建立在一个云端优先的系统之上。
 
-**当前状态：** Windows 版本已可下载 · 即使没有 API Key，你也可以完成本地记账、查看财务报表和基础查询 · 自备 API Key 仅用于启用 AI 辅助能力 · 涉及写入的操作必须用户确认 · 本地 API 与 MCP 集成属于 token 保护的本地访问路径 · 本仓库用于版本发布、文档说明与社区反馈，并非完整开源代码仓库首页。
+**当前状态：** Windows 版本已可下载 · 即使没有 API Key，你也可以完成本地记账、查看财务报表和基础查询 · BYOK：核心本地功能无需 API Key；AI 助手能力需要用户自行配置模型 API Key · 涉及写入的操作必须用户确认 · 本地 API 与 MCP 集成属于 token 保护的本地访问路径 · 本仓库用于版本发布、文档说明与社区反馈，并非完整开源代码仓库首页。
 
 [下载 Windows 版本](https://github.com/SimonZhangM/XplorOne/releases) · [快速开始](./docs/getting-started_zh-CN.md) · [WAIC 项目计划书](./docs/waic/XplorOne-WAIC-FutureTech-OPC-Project-Plan.pdf) · [讨论与反馈](https://github.com/SimonZhangM/XplorOne/discussions)
 

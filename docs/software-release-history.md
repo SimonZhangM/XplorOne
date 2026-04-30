@@ -1,7 +1,51 @@
+English | [简体中文](./software-release-history_zh-CN.md)
+
 # XplorOne Software Release History
 
 This page records user-facing XplorOne release notes.  
 It is based on the existing project changelog and rewritten in the newer public release-note format for GitHub, website, and marketing use.
+
+---
+
+# XplorOne v0.4.1
+
+Release date: 2026-04-30
+
+This release polishes the XplorOne workspace after the two-assistant chat redesign. It improves professional chart localization, makes AI personalization language-specific, strengthens the Analysis and FreeChat agent identities, refines model-service presets and desktop networking, and fixes notification lifecycle details so dismissed reminders stay quiet until a new cycle is meaningful.
+
+## Added
+
+- Added a top-bar theme switch entry for Light, Dark, and Follow System modes.
+- Added OpenAI and Google Gemini presets to the model-service preset list.
+- Added bilingual professional-chart text helpers for chart titles, scopes, periods, amounts, percentages, axis units, empty states, and fallback names.
+- Added localized NSIS installer copy for the optional XplorOne skills page.
+
+## Changed
+
+- AI personalization summaries now follow the current response language, so Chinese conversations receive Chinese preference context and English conversations receive English preference context without sending both.
+- Analysis mode and FreeChat now use richer XplorOne-specific agent profiles with clearer data boundaries, financial-risk limits, and response discipline.
+- Model Settings now keeps custom draft endpoint details separate from the currently enabled model state.
+- The default UI fallback for non-Chinese systems is now English.
+- Legal packaging now uses the root `LICENSE` file path expected by release resources.
+
+## Improved
+
+- Improved professional chart localization across treemap, sunburst, heatmap, waterfall, dual-axis, and stacked chart views.
+- Improved English query answer wording for summaries, balances, transaction lists, and category totals.
+- Improved chat conversation titles and assistant-message tool timestamps.
+- Improved desktop model requests by honoring the system proxy before using Electron networking.
+- Improved split-transaction export and UI wording around allocation details.
+
+## Fixed
+
+- Fixed dismissed inactivity and stale-backup reminders being regenerated too eagerly within the same logical cycle.
+- Fixed dismissed notification filtering so only active unread/read items appear in the notification list.
+- Fixed several remaining Chinese-only professional-chart labels in English UI.
+
+## Security & Stability
+
+- Kept AI personalization injection as a controlled natural-language summary instead of raw settings JSON.
+- Reduced model hallucination risk by telling Analysis and FreeChat not to claim database writes, navigation, exports, deletions, or edits that did not occur.
 
 ---
 

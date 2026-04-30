@@ -163,9 +163,10 @@ XplorOne supports Chinese and English UI work, and bilingual AI behavior is bein
 Current boundaries may include:
 
 - some backend error messages may not be fully localized
-- some advanced chart labels or technical messages may still need refinement
+- some advanced chart labels or technical messages may still need refinement, even though professional-chart localization has improved
 - model-generated responses may vary by model provider
 - English and Chinese natural-language understanding may not be equally complete across all workflows
+- AI personalization context should follow the current response language when enabled, but provider output may still vary
 
 If you encounter a language issue, please report it with:
 
@@ -188,6 +189,8 @@ Current report areas may include:
 - selected charts and trend views
 
 Advanced chart availability or visibility may vary by release channel, product tier, or current product navigation.
+
+Professional-chart localization has improved, but reports and chart labels should still be evaluated within the current release scope.
 
 XplorOne should not be described as a complete enterprise BI suite.
 
