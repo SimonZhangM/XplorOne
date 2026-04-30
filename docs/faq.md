@@ -113,9 +113,11 @@ Depending on the workflow, this may include:
 - selected report or query context
 - entry draft context
 - recent conversation context
-- AI personalization summary, only if enabled by the user
+- language-specific AI personalization summary, only if enabled by the user
 
 XplorOne aims to send task-relevant context, not the entire local database by default.
+
+When AI personalization is enabled, XplorOne is designed to send a controlled natural-language summary rather than raw settings JSON.
 
 Users should choose a model provider they trust and review that provider’s own data and privacy terms.
 
@@ -137,6 +139,8 @@ In XplorOne, it means you can connect the app to a model service using your own 
 
 BYOK does not mean XplorOne requires AI to be useful.
 It only means optional AI-assisted workflows can use the model provider you configure.
+
+The app may provide presets for common providers such as OpenAI and Google Gemini, while still allowing custom OpenAI-compatible model-service configuration where supported.
 
 For setup details, see [BYOK Setup](./byok-setup.md).
 
@@ -313,6 +317,8 @@ When reporting a language issue, include:
 
 XplorOne may consider the current message language, previous clear user language in the session, and UI language as fallback.
 
+If AI personalization is enabled, personalization context is also intended to follow the current response language.
+
 ## 28. What should I do if model connection testing fails?
 
 Check:
@@ -323,6 +329,7 @@ Check:
 - whether the provider account has enough credits or quota
 - whether the provider requires a special endpoint format
 - whether your network connection is available
+- whether your system proxy or network environment is blocking the request
 
 For more details, see [BYOK Setup](./byok-setup.md).
 

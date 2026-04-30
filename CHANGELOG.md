@@ -12,32 +12,44 @@ XplorOne is currently moving from an early local-first desktop finance workspace
 
 ## Latest Release
 
-### v0.4.0 - 2026-04-28
+### v0.4.1 - 2026-04-30
 
-**Focus: clearer Local Assistant and AI Assistant boundaries**
+**Focus: workspace polish after the two-assistant redesign**
 
-This release reorganizes chat into two clearer assistants: Local Assistant for fast local queries and entries, and AI Assistant for deeper analysis and open-ended conversation. It also tightens the local query boundary so basic finance queries no longer fall back to AI guessing, improves chat session routing and assistant switching, and strengthens bilingual display for account and category names.
+This release polishes XplorOne after the Local Assistant and AI Assistant redesign. It improves professional-chart localization, makes AI personalization language-specific, strengthens Analysis and FreeChat agent boundaries, refines model-service presets and desktop networking, and fixes reminder lifecycle details so dismissed reminders stay quiet until a new cycle is meaningful.
 
 #### Highlights
 
-- Added Local Assistant and AI Assistant as top-level chat modes with separate session pools, assistant avatars, and mode-specific quick scenarios.
-- Added a new assistant selection landing state for new conversations, plus an explicit switch action in the chat sidebar.
-- Added `chat:local` and `chat:ai` session scopes while keeping older chat scopes display-compatible.
-- Changed Local Query into a purely local query kernel that can answer by rule, ask for clarification, or return an unsupported boundary response instead of falling back to AI intent guessing.
-- Split assistant capabilities so Local Assistant exposes Query and Entry, while AI Assistant exposes Analysis and Free Chat.
-- Improved chat markdown rendering, including table display in AI-generated analysis answers.
-- Improved Chinese and English display consistency for categories and accounts in chat answers, draft-entry tables, and analysis contexts.
-- Fixed new-chat routing issues, accidental deletion of the top hint, web-preview abort errors, truncated AI answers, and ambiguous Alipay balance handling.
+- Added a top-bar theme switch entry for Light, Dark, and Follow System modes.
+- Added OpenAI and Google Gemini presets to the model-service preset list.
+- Added bilingual professional-chart text helpers for titles, scopes, periods, amounts, percentages, axis units, empty states, and fallback names.
+- Added localized NSIS installer copy for the optional XplorOne skills page.
+- Changed AI personalization summaries to follow the current response language, so Chinese and English conversations receive language-appropriate preference context.
+- Strengthened Analysis mode and FreeChat with richer XplorOne-specific agent profiles, clearer data boundaries, financial-risk limits, and response discipline.
+- Improved desktop model requests by honoring the system proxy before using Electron networking.
+- Improved chat titles, assistant-message tool timestamps, English query answer wording, split-transaction export text, and professional-chart localization.
+- Fixed dismissed inactivity and stale-backup reminders being regenerated too eagerly within the same logical cycle.
+- Fixed remaining Chinese-only professional-chart labels in English UI.
 
 #### Security and stability
 
-- Added more consistent debug and audit fields for chat routing, including top mode, internal capability, route reason, query basis, data basis, and model usage.
-- Reduced accidental model calls by enforcing that Local Assistant query and entry flows do not silently invoke AI.
-- Maintained clear write boundaries: AI can assist with interpretation and analysis, while write-related flows still require user confirmation.
+- Kept AI personalization injection as a controlled natural-language summary instead of raw settings JSON.
+- Reduced model hallucination risk by instructing Analysis and FreeChat not to claim database writes, navigation, exports, deletions, or edits that did not occur.
+- Preserved clearer notification lifecycle behavior by filtering dismissed reminders out of the active notification list until a meaningful new cycle exists.
 
 ---
 
 ## Recent Releases
+
+### v0.4.0 - 2026-04-28
+
+**Focus: clearer Local Assistant and AI Assistant boundaries**
+
+- Added Local Assistant and AI Assistant as top-level chat modes with separate session pools, assistant avatars, and mode-specific quick scenarios.
+- Changed Local Query into a local query kernel that can answer by rule, ask for clarification, or return an unsupported boundary response instead of falling back to AI intent guessing.
+- Split assistant capabilities so Local Assistant exposes Query and Entry, while AI Assistant exposes Analysis and Free Chat.
+- Improved chat markdown rendering, table display, session routing, assistant switching, and bilingual account/category display.
+- Reduced accidental model calls by enforcing that Local Assistant query and entry flows do not silently invoke AI.
 
 ### v0.3.10 - 2026-04-27
 
@@ -109,13 +121,17 @@ This release reorganizes chat into two clearer assistants: Local Assistant for f
 
 ## 0.4 Series Highlights
 
-The 0.4 series begins by making XplorOne's chat model easier to understand: Local Assistant handles fast local query and entry workflows, while AI Assistant handles deeper analysis and broader conversation.
+The 0.4 series makes XplorOne's assistant model and desktop polish easier to trust: Local Assistant handles fast local query and entry workflows, while AI Assistant handles deeper analysis and broader conversation with clearer boundaries.
 
 - Split chat into clearer Local Assistant and AI Assistant experiences.
 - Tightened local query behavior so supported local finance queries do not silently fall back to AI guessing.
 - Improved chat session routing, assistant switching, and new-conversation landing behavior.
-- Improved bilingual account and category display in chat answers, draft-entry tables, and analysis contexts.
-- Reduced accidental model calls by enforcing clearer Local Assistant boundaries.
+- Improved bilingual account, category, query-answer, and professional-chart display.
+- Added theme switching and clearer model-service presets.
+- Made AI personalization language-specific and kept it as a controlled natural-language summary.
+- Strengthened Analysis and FreeChat agent boundaries around data access, financial-risk limits, and claimed actions.
+- Improved desktop model requests by honoring the system proxy.
+- Reduced accidental model calls and unsupported action claims by enforcing clearer assistant boundaries.
 
 ---
 

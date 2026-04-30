@@ -150,6 +150,8 @@ The current report navigation includes:
 - Income & Expense
 - Assets & Liabilities
 
+Report and chart surfaces include bilingual display work for titles, scopes, periods, amounts, percentages, axis units, empty states, and fallback labels where supported by the current release.
+
 ### Cash Flow
 
 Cash Flow focuses on money movement.
@@ -225,6 +227,8 @@ It can help with:
 - broader finance-related chat
 
 AI Assistant requires a user-configured model API key.
+
+Analysis and broader conversation are guided by XplorOne-specific assistant profiles with explicit data boundaries, financial-risk limits, and response discipline.
 
 Write actions still require user confirmation.
 
@@ -327,7 +331,9 @@ Settings help you adjust the product to your own workflow.
 Settings may include:
 
 - model service configuration
+- model provider presets
 - display preferences
+- theme mode
 - interface language
 - personal profile
 - data settings

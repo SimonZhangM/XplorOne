@@ -115,9 +115,11 @@ Depending on the workflow, this may include:
 - selected report or query context
 - entry draft context
 - recent conversation context
-- AI personalization summary, only if the user has enabled AI personalization
+- language-specific AI personalization summary, only if the user has enabled AI personalization
 
 XplorOne aims to send task-relevant context, not the entire local database by default.
+
+When AI personalization is enabled, XplorOne is intended to send a controlled natural-language summary rather than raw settings JSON, and that summary should follow the current response language.
 
 Users should choose a model provider they trust and review that provider’s own data and privacy terms.
 
@@ -147,12 +149,16 @@ AI Assistant analysis may use structured financial context to generate explanati
 
 This is intended to help users understand their financial data, not to replace user judgment.
 
+Analysis is guided to avoid claiming writes, navigation, exports, deletions, or edits that did not actually occur.
+
 ### AI Assistant free chat
 
 AI Assistant free chat is for broader finance-related conversations.
 
 It is not the same as direct ledger query.
 In the current release line, free chat is not positioned as the default path for direct ledger access.
+
+Free chat is also guided by explicit financial-risk and data-boundary instructions.
 
 ## 8. AI Write Boundary
 

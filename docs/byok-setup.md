@@ -45,7 +45,7 @@ Before configuring a model service, prepare:
 - model name
 - API key
 
-XplorOne is designed around OpenAI-compatible model-service configuration patterns.
+XplorOne is designed around OpenAI-compatible model-service configuration patterns and may provide built-in presets for common providers such as OpenAI and Google Gemini.
 
 Different providers may use different:
 
@@ -54,6 +54,7 @@ Different providers may use different:
 - rate limits
 - billing rules
 - response behavior
+- proxy or network requirements
 
 Please check your model provider’s own documentation if you are unsure about the correct base URL or model name.
 
@@ -173,6 +174,7 @@ Check:
 - whether the provider account has enough credits or quota
 - whether the provider requires a special endpoint format
 - whether the network connection is available
+- whether your system proxy or network environment allows the request
 
 ### AI features still do not work after saving
 
@@ -200,6 +202,7 @@ XplorOne may consider:
 - your current message language
 - previous clear user language in the same session
 - UI language as fallback
+- language-specific AI personalization context, if personalization is enabled
 
 If language behavior looks wrong, include the input language, UI language, provider, and expected response language when reporting the issue.
 
